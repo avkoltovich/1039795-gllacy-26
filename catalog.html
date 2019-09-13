@@ -51,7 +51,46 @@
     <h1>Сливочное мороженое</h1>
     <section>
       <h2 class="visually-hidden">Фильтры</h2>
-      <!-- Здесь будут формы фильтров -->
+      <form>
+        <fieldset>
+          <legend>Сортировка</legend>
+          <select name="sorting" aria-label="Сортировка" id="catalog-sorting">
+            <option value="">по популярности</option>
+            <option value="">сначала недорогие</option>
+            <option value="">сначала дорогие</option>
+            <option value="">по жирности</option>
+          </select>
+        </fieldset>
+        <fieldset>
+          <legend>Цена: 100 руб. – 500 руб.</legend>
+          <input type="range">
+        </fieldset>
+        <fieldset>
+          <legend>Жирность:</legend>
+          <input type="radio" name="0" id="fat-0">
+          <label for="fat-0">0%</label>
+          <input type="radio" name="10" id="fat-10" checked>
+          <label for="fat-10">до 10%</label>
+          <input type="radio" name="less30" id="fat-less30">
+          <label for="fat-less30">до 30%</label>
+          <input type="radio" name="more30" id="fat-more30">
+          <label for="fat-more30">выше 30%</label>
+        </fieldset>
+        <fieldset>
+          <legend>Наполнители:</legend>
+          <input type="checkbox" name="chocolate" id="filler-chocolate" checked>
+          <label for="filler-chocolate">шоколадные</label>
+          <input type="checkbox" name="sugar" id="filler-sugar" checked>
+          <label for="filler-sugar">сахарные присыпки</label>
+          <input type="checkbox" name="fruit" id="filler-fruit">
+          <label for="filler-fruit">фрукты</label>
+          <input type="checkbox" name="syrup" id="filler-syrup">
+          <label for="filler-syrup">сиропы</label>
+          <input type="checkbox" name="jam" id="filler-jam">
+          <label for="filler-jam">джемы</label>
+        </fieldset>
+        <button type="submit">Применить</button>
+      </form>
     </section>
     <section>
       <h2 class="visually-hidden">Каталог мороженого</h2>

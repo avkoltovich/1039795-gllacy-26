@@ -12,7 +12,9 @@
       <div>
         <img src="img/gllacy.svg" width="154" height="64" alt="Gllacy Shop">
         <ul>
-          <li><a href="catalog.html">Каталог</a></li>
+          <li><a href="catalog.html">Каталог</a>
+            
+          </li>
           <li><a href="">Доставка и оплата</a></li>
           <li><a href="">О Компании</a></li>
         </ul>
@@ -159,11 +161,11 @@
         Обещаем
         не спамить и не слать всякой ненужной ерунды. Честно =)
       </p>
-        <form action="https://echo.htmlacademy.ru" method="post">
-          <label class="visually-hidden" for="user-email">Электронная почта</label>
-          <input type="email" name="email" id="user-email">
-          <button type="submit">Отправить</button>
-        </form>
+      <form action="https://echo.htmlacademy.ru" method="post">
+        <label class="visually-hidden" for="user-email">Электронная почта</label>
+        <input type="email" name="email" id="user-email">
+        <button type="submit">Отправить</button>
+      </form>
     </section>
     <section>
       <h2 class="visually-hidden">Контактная информация</h2>
@@ -183,7 +185,7 @@
           <a href="tel:+78124502525">8 812 450-25-25</a>
           (с 10 до 20 ежедневно)
         </p>
-        <a href="">Форма обратной связи</a>
+        <button type="button">Форма обратной связи</button>
       </div>
     </section>
   </main>
@@ -213,6 +215,13 @@
     </p>
   </footer>
   <section>
+    <h2 class="visually-hidden">Поиск</h2>
+    <form action="https://echo.htmlacademy.ru" method="post">
+      <label class="visually-hidden" for="user-search">Форма поиска</label>
+      <input type="text" name="search" id="user-search" placeholder="Что ищем?">
+    </form>
+  </section>
+  <section>
     <h2 class="visually-hidden">Вход</h2>
     <form action="https://echo.htmlacademy.ru" method="post">
       <p>
@@ -230,7 +239,26 @@
       </p>
     </form>
   </section>
-
+  <section>
+    <h2 class="visually-hidden">Форма обратной связи</h2>
+    <h3>Мы обязательно вам ответим!</h3>
+    <button type="button" aria-label="Закрыть">X</button>
+    <form action="https://echo.htmlacademy.ru" method="post">
+      <p>
+        <label class="visually-hidden" for="feedback-name">Имя</label>
+        <input type="text" name="name" id="feedback-name">
+      </p>
+      <p>
+        <label class="visually-hidden" for="feedback-email">Электронная почта</label>
+        <input type="email" name="email" id="feedback-email">
+      </p>
+      <p>
+        <label class="visually-hidden" for="feedback-message">Сообщение</label>
+        <textarea name="message" id="feedback-message" cols="30" rows="10"></textarea>
+      </p>
+      <button type="submit">Отправить</button>
+    </form>
+  </section>
 </body>
 
 </html>

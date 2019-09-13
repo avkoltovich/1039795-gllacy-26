@@ -159,10 +159,11 @@
         Обещаем
         не спамить и не слать всякой ненужной ерунды. Честно =)
       </p>
-      <p>
-        <!-- Здесь будет поле ввода электронной почты -->
-        <button type="button">Отправить</button>
-      </p>
+        <form action="https://echo.htmlacademy.ru" method="post">
+          <label class="visually-hidden" for="user-email">Электронная почта</label>
+          <input type="email" name="email" id="user-email">
+          <button type="submit">Отправить</button>
+        </form>
     </section>
     <section>
       <h2 class="visually-hidden">Контактная информация</h2>
@@ -186,10 +187,14 @@
   </main>
   <footer>
     <ul>
-      <li><a href="" target="_blank"><img src="img/twitter.svg" width="32" height="32" alt="Твиттер"><span class="visually-hidden">Твиттер</span></a></li>
-      <li><a href="" target="_blank"><img src="img/insta.svg" width="32" height="32" alt="Инстаграм"><span class="visually-hidden">Инстаграм</span></a></li>
-      <li><a href="" target="_blank"><img src="img/facebook.svg" width="32" height="32" alt="Фейсбук"><span class="visually-hidden">Фейсбук</span></a></li>
-      <li><a href="" target="_blank"><img src="img/vk.svg" width="32" height="32" alt="Вконтакте"><span class="visually-hidden">Вконтакте</span></a></li>
+      <li><a href="" target="_blank"><img src="img/twitter.svg" width="32" height="32" alt="Твиттер"><span
+            class="visually-hidden">Твиттер</span></a></li>
+      <li><a href="" target="_blank"><img src="img/insta.svg" width="32" height="32" alt="Инстаграм"><span
+            class="visually-hidden">Инстаграм</span></a></li>
+      <li><a href="" target="_blank"><img src="img/facebook.svg" width="32" height="32" alt="Фейсбук"><span
+            class="visually-hidden">Фейсбук</span></a></li>
+      <li><a href="" target="_blank"><img src="img/vk.svg" width="32" height="32" alt="Вконтакте"><span
+            class="visually-hidden">Вконтакте</span></a></li>
     </ul>
     <nav>
       <ul>
@@ -210,7 +215,7 @@
     <form action="https://echo.htmlacademy.ru" method="post">
       <p>
         <label class="visually-hidden" for="user-login">Логин</label>
-        <input type="text" name="login" id="user-login" placeholder="Электронная почта">
+        <input type="email" name="login" id="user-login" placeholder="Электронная почта">
       </p>
       <p>
         <label class="visually-hidden" for="user-password">Пароль</label>

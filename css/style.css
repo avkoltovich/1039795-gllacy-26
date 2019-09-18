@@ -83,8 +83,8 @@ body {
 
 .header-nav__link:hover,
 .header-nav__link:focus {
-  color: #323232;
   text-decoration: none;
+  color: #323232;
 
   background-color: #f7f6f3;
   border-radius: 15px;
@@ -113,11 +113,11 @@ body {
 }
 
 .header-nav-submenu__link {
-  color: #323232;
   font-size: 14px;
   font-weight: 400;
   line-height: 16px;
   text-decoration: none;
+  color: #323232;
 }
 
 .header-nav-submenu__link b {
@@ -129,11 +129,11 @@ body {
 .header-nav-submenu__link:active {}
 
 .header-nav__button {
-  color: #fff;
   font-size: 14px;
   font-weight: 500;
   line-height: 16px;
   text-decoration: none;
+  color: #fff;
 
   background-color: rgba(255, 255, 255, 0.2);
   border-radius: 15px;
@@ -157,7 +157,7 @@ body {
 
 .header-nav__button:hover .header-nav__svg,
 .header-nav__button--search:hover .header-nav__svg {
-    fill: #323232;
+  fill: #323232;
 }
 
 .header__schedule {
@@ -167,9 +167,34 @@ body {
 }
 
 .header__schedule--tel {
-  color: #fff;
   font-size: 22px;
   font-weight: 700;
   line-height: 24px;
   text-decoration: none;
+  color: #fff;
+}
+
+.advantages {
+  background-color: #f2e9d8;
+  background-image: url("/img/wafer.jpg");
+  background-size: cover;
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  border-radius: 30px;
+}
+
+.advantages b {
+  font-size: 24px;
+  font-weight: 500;
+  color: #323232;
+}
+
+.advantages__list {
+  list-style: none;
+}
+
+.advantages__item p {
+  font-size: 16px;
+  font-weight: 400;
+  color: #323232;
 }

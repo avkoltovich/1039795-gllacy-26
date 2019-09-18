@@ -338,6 +338,10 @@ body {
   fill: #fff;
 }
 
-.main-footer-nav__link--bold:hover .main-footer-nav__svg {
+.main-footer-nav__item--heart {
+  
+}
+
+.main-footer-nav__item--heart:hover .main-footer-nav__svg {
   fill: red;
 }

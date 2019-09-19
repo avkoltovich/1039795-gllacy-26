@@ -239,7 +239,6 @@ body {
 
 .catalog__list {
   list-style: none;
-  width: fit-content;
 }
 
 .catalog__link {
@@ -247,8 +246,6 @@ body {
 }
 
 .catalog__link h3 {
-  width: fit-content;
-
   font-size: 16px;
   font-weight: 500;
   line-height: 22px;

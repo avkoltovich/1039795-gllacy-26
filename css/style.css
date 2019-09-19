@@ -210,6 +210,13 @@ body {
   border-bottom: 1px solid rgba(255, 188, 158, 0.3);
 }
 
+.slide__caption {
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 61px;
+  text-align: center;
+}
+
 .main-heading {
   font-size: 35px;
   font-weight: 700;

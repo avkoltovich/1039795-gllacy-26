@@ -243,6 +243,31 @@ body {
     linear-gradient(to bottom, #e74a35, #f26843);
 }
 
+.slider__pager-button {
+  border: none;
+  background-color: rgba(0, 0, 0, 0)
+}
+
+.slider__pager-item {
+  display: block;
+
+  width: 19px;
+  height: 19px;
+
+  border-radius: 100%;
+  border: 2px solid #fff;
+}
+
+.slider__pager-item:hover {
+  background-color: rgba(255, 255, 255, 0.4);
+}
+
+.slider__pager-item--current,
+.slider__pager-item--current:hover,
+.slider__pager-item:active {
+  background-color: #fff;
+}
+
 .main-heading {
   font-size: 35px;
   font-weight: 700;

@@ -128,9 +128,6 @@ body {
   color: #323232;
 }
 
-.header-nav-submenu__link:hover,
-.header-nav-submenu__link:active {}
-
 .header-nav__button {
   font-size: 14px;
   font-weight: 500;
@@ -718,8 +715,6 @@ body {
 .main-footer-nav__svg {
   fill: #fff;
 }
-
-.main-footer-nav__item--heart {}
 
 .main-footer-nav__item--heart:hover .main-footer-nav__svg {
   fill: red;

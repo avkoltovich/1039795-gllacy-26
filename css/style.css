@@ -295,6 +295,71 @@ body {
   border-radius: 15px;
 }
 
+.promotions h3 {
+  font-size: 35px;
+  font-weight: 700;
+  line-height: 41px;
+  color: #fff;
+}
+
+.promotions p {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 22px;
+  color: #ffffff;
+}
+
+.promotions__raspberry {
+  width: 560px;
+  height: 229px;
+
+  background-color: #480317;
+  background-image: url("/img/raspberry.jpg");
+  background-size: cover;
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  border-radius: 15px;
+}
+
+.promotions__chocolate {
+  width: 560px;
+  height: 229px;
+
+  background-color: #724629;
+  background-image: url("/img/chocolate.jpg");
+  background-size: cover;
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  border-radius: 15px;
+}
+
+.promotions__button {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 24px;
+  text-decoration: none;
+  color: #fefefe;
+
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0px 2px 2px 0 rgba(85, 8, 0, 0.54);
+  background-image: linear-gradient(to top, #ca3824, #f26843);
+}
+
+.promotions__button:hover {
+  box-shadow: 0px 1px 2px 0 #ac1000;
+  background-image:
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)),
+    linear-gradient(to top, #e74a35, #f26843);
+}
+
+.promotions__button:active {
+  box-shadow: inset 0px 2px 2px 0 #942718;
+  background-image:
+    linear-gradient(to bottom, rgba(0, 0, 0, 0.07), rgba(0, 0, 0, 0.07)),
+    linear-gradient(to bottom, #e74a35, #f26843);
+}
+
 .catalog__list {
   list-style: none;
 }
@@ -451,6 +516,56 @@ body {
 }
 
 .subscription__form button:active {
+  box-shadow: inset 0px 2px 2px 0 #942718;
+  background-image:
+    linear-gradient(to bottom, rgba(0, 0, 0, 0.07), rgba(0, 0, 0, 0.07)),
+    linear-gradient(to bottom, #e74a35, #f26843);
+}
+
+.contacts__container {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  color: #323232;
+
+  background-color: #fff;
+  border-radius: 15px;
+}
+
+.contacts__address {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 24px;
+  font-style: inherit;
+}
+
+.contacts__tel {
+  font-size: 18px;
+  font-weight: 700;
+  text-decoration: none;
+  color: inherit;
+}
+
+.contacts__button {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 24px;
+  color: #fefefe;
+
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0px 2px 2px 0 rgba(85, 8, 0, 0.54);
+  background-image: linear-gradient(to top, #ca3824, #f26843);
+}
+
+.contacts__button:hover {
+  box-shadow: 0px 1px 2px 0 #ac1000;
+  background-image:
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)),
+    linear-gradient(to top, #e74a35, #f26843);
+}
+
+.contacts__button:active {
   box-shadow: inset 0px 2px 2px 0 #942718;
   background-image:
     linear-gradient(to bottom, rgba(0, 0, 0, 0.07), rgba(0, 0, 0, 0.07)),

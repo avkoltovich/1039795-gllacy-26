@@ -185,6 +185,31 @@ body {
   color: #fff;
 }
 
+.breadcrumbs {
+  list-style: none;
+}
+
+.breadcrumbs__item {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 16px;
+  color: #fff;
+}
+
+.breadcrumbs__link {
+  text-decoration: none;
+  color: inherit;
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.breadcrumbs__link:hover,
+.breadcrumbs__link:active {
+  color: #ffbc9e;
+
+  border-bottom: 1px solid rgba(255, 188, 158, 0.3);
+}
+
 .advantages {
   background-color: #f2e9d8;
   background-image: url("/img/wafer.jpg");
@@ -372,4 +397,8 @@ body {
 
 .main-footer-nav__item--heart:hover .main-footer-nav__svg {
   fill: red;
+}
+
+.temporarily-hidden {
+  display: none;
 }

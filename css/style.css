@@ -428,6 +428,69 @@ body {
   background-color: rgba(255, 255, 255, 0.2);
 }
 
+.catalog-pagination {
+  list-style: none;
+}
+
+.catalog-pagination__item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 26px;
+  height: 26px;
+
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 18px;
+  color: #fff;
+
+  border-radius: 100%;
+}
+
+.catalog-pagination__svg-left,
+.catalog-pagination__svg-right {
+  fill: #fff;
+}
+
+.catalog-pagination__svg-left {
+  transform: scale(-1, 1);
+}
+
+.catalog-pagination__svg--disabled {
+  opacity: 0.2;
+}
+
+.catalog-pagination__item a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.catalog-pagination__item:active .catalog-pagination__svg-right,
+.catalog-pagination__item:active .catalog-pagination__svg-left {
+  fill: #323232;
+}
+
+.catalog-pagination__item:active .catalog-pagination__svg--disabled {
+  fill: #fff;
+}
+
+.catalog-pagination__item:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.catalog-pagination__item--current,
+.catalog-pagination__item--current:hover,
+.catalog-pagination__item:active {
+  color: #323232;
+
+  background-color: #fff;
+}
+
+.catalog-pagination__item--disabled:hover,
+.catalog-pagination__item--disabled:active {
+  background-color: rgba(255, 255, 255, 0);
+}
+
 .advantages {
   background-color: #f2e9d8;
   background-image: url("/img/wafer.jpg");

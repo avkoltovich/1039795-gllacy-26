@@ -334,8 +334,8 @@ body {
   height: 229px;
 
   background-color: #480317;
-  background-image: url("img/raspberry.jpg");
-  background-size: cover;
+  background-image: url("/img/raspberry.jpg");
+  background-size: contain;
   background-position: 0 0;
   background-repeat: no-repeat;
   border-radius: 15px;
@@ -346,8 +346,8 @@ body {
   height: 229px;
 
   background-color: #724629;
-  background-image: url("img/chocolate.jpg");
-  background-size: cover;
+  background-image: url("/img/chocolate.jpg");
+  background-size: contain;
   background-position: 0 0;
   background-repeat: no-repeat;
   border-radius: 15px;
@@ -485,7 +485,7 @@ body {
 
 .advantages {
   background-color: #f2e9d8;
-  background-image: url("img/wafer.jpg");
+  background-image: url("/img/wafer.jpg");
   background-size: contain;
   background-position: 0 0;
   background-repeat: no-repeat;
@@ -513,7 +513,7 @@ body {
   height: 220px;
 
   background-color: #fff;
-  background-image: url("img/strawberry.jpg");
+  background-image: url("/img/strawberry.jpg");
   background-size: contain;
   background-position: 0 0;
   background-repeat: no-repeat;
@@ -548,7 +548,7 @@ body {
 
   border-radius: 15px;
   background-color: #f8f7f4;
-  background-image: url("img/border.png");
+  background-image: url("/img/border.png");
   background-size: contain;
   background-position: 0 0;
   background-repeat: no-repeat;

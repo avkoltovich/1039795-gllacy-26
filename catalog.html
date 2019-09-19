@@ -5,8 +5,8 @@
   <meta charset="utf-8">
   <title>HTML Academy: Глейси — Каталог</title>
 
-  <link rel="stylesheet" href="/css/normalize.css">
-  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/style.css">
 
 </head>
 
@@ -85,12 +85,12 @@
       </li>
       <li class="breadcrumbs__item breadcrumbs__item--current">Сливочное</li>
     </ul>
-    <h1>Сливочное мороженое</h1>
-    <section>
+    <h1 class="main-heading">Сливочное мороженое</h1>
+    <section class="filter">
       <h2 class="visually-hidden">Фильтры</h2>
-      <form>
-        <fieldset>
-          <legend>Сортировка</legend>
+      <form class="filter__form">
+        <fieldset class="filter__sorting">
+          <legend class="filter__name">Сортировка</legend>
           <select name="sorting" aria-label="Сортировка" id="catalog-sorting">
             <option value="by_popularity">по популярности</option>
             <option value="by_cheap">сначала недорогие</option>
@@ -98,12 +98,12 @@
             <option value="by_fat">по жирности</option>
           </select>
         </fieldset>
-        <fieldset>
-          <legend>Цена: 100 руб. – 500 руб.</legend>
+        <fieldset class="filter__price">
+          <legend class="filter__name">Цена: 100 руб. – 500 руб.</legend>
           <input type="range">
         </fieldset>
-        <fieldset>
-          <legend>Жирность:</legend>
+        <fieldset class="filter__fat">
+          <legend class="filter__name">Жирность:</legend>
           <input type="radio" name="0" id="fat-0">
           <label for="fat-0">0%</label>
           <input type="radio" name="10" id="fat-10" checked>
@@ -113,8 +113,8 @@
           <input type="radio" name="more30" id="fat-more30">
           <label for="fat-more30">выше 30%</label>
         </fieldset>
-        <fieldset>
-          <legend>Наполнители:</legend>
+        <fieldset class="filter__filler">
+          <legend class="filter__name">Наполнители:</legend>
           <input type="checkbox" name="chocolate" id="filler-chocolate" checked>
           <label for="filler-chocolate">шоколадные</label>
           <input type="checkbox" name="sugar" id="filler-sugar" checked>

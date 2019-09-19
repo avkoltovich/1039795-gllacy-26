@@ -210,6 +210,18 @@ body {
   border-bottom: 1px solid rgba(255, 188, 158, 0.3);
 }
 
+.main-heading {
+  font-size: 35px;
+  font-weight: 700;
+  line-height: 41px;
+}
+
+.filter__form fieldset {
+  border: none;
+}
+
+
+
 .advantages {
   background-color: #f2e9d8;
   background-image: url("/img/wafer.jpg");

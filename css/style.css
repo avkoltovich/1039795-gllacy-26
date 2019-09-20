@@ -77,12 +77,46 @@ body {
   background-color: #849d8f;
 }
 
+.header {
+  display: flex;
+  flex-direction: column;
+  width: 1146px;
+  margin: auto;
+}
+
+.header-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-nav__wrapper {
+  display: flex;
+  margin-top: 10px;
+}
+
 .header-nav__menu,
 .header-nav__submenu {
   list-style: none;
 }
 
+.header-nav__menu {
+  display: flex;
+  padding: 0;
+  margin-left: 10px;
+  margin-top: 11px;
+}
+
+.header-nav__item {
+  padding-top: 9px;
+  padding-right: 13px;
+  padding-bottom: 10px;
+  padding-left: 14px;
+}
+
 .header-nav__link {
+  display: block;
+
   color: inherit;
   font-size: 16px;
   font-weight: 700;
@@ -92,11 +126,22 @@ body {
   border-bottom: 1px solid rgba(255, 255, 255, 0.3);
 }
 
-.header-nav__link:hover {
-  color: #323232;
+.header-nav__item:hover {
+  padding: 0;
 
   background-color: #f7f6f3;
-  border-radius: 15px;
+  border-radius: 20px;
+}
+
+.header-nav__item:hover .header-nav__link {
+  padding-top: 9px;
+  padding-right: 13px;
+  padding-bottom: 10px;
+  padding-left: 14px;
+
+  color: #323232;
+
+  border-bottom:none;
 }
 
 .header-nav__link:active {
@@ -128,23 +173,47 @@ body {
   color: #323232;
 }
 
+.header-nav__wrapper--user {
+  margin-top: 0px;
+}
+
 .header-nav__button {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding-right: 17px;
+  padding-left: 16px;
+  margin-left: 10px;
+
   font-size: 14px;
   font-weight: 500;
-  line-height: 16px;
+  line-height: 14px;
   text-decoration: none;
   color: #fff;
 
   background-color: rgba(255, 255, 255, 0.2);
   border: none;
-  border-radius: 15px;
+  border-radius: 20px;
+}
+
+.header-nav__button-text {
+  padding-left: 7px;
 }
 
 .header-nav__svg {
   fill: #fff;
 }
 
+.header-nav__svg--oval {
+  margin-top: 2px;
+}
+
 .header-nav__button--search {
+  margin-top: 0;
+  width: 33px;
+  height: 33px;
+  padding: 8px;
+
   border-radius: 50%;
 }
 
@@ -161,9 +230,13 @@ body {
 }
 
 .header__schedule {
+  align-self: flex-end;
+  margin-top: -8px;
+
   font-size: 14px;
   font-weight: 700;
-  line-height: 16px;
+  line-height: 24px;
+  text-align: right;
 }
 
 .header__schedule--tel {

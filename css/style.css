@@ -513,15 +513,35 @@ body {
     linear-gradient(to bottom, #e74a35, #f26843);
 }
 
+.catalog {
+  margin-top: 34px;
+}
+
 .catalog__list {
+  display: flex;
+  justify-content: space-around;
+  padding: 0;
+
   list-style: none;
 }
 
+.catalog__item {
+  width: 293px;
+  height: 405px;
+  padding: 6px 14px 10px 13px;
+}
+
 .catalog__link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
   text-decoration: none;
 }
 
-.catalog__link h3 {
+.catalog__link b {
+  display: inline-flex;
+
   font-size: 16px;
   font-weight: 500;
   line-height: 22px;
@@ -531,6 +551,9 @@ body {
 }
 
 .catalog__link p {
+  align-self: flex-start;
+  margin-top: -58px;
+
   font-size: 45px;
   font-weight: 700;
   line-height: 45px;
@@ -539,7 +562,7 @@ body {
   text-shadow: 1px 1px 3px rgba(49, 50, 53, 0.5);
 }
 
-.catalog__link span {
+.catalog__price {
   font-size: 30px;
   font-weight: 700;
   line-height: 45px;

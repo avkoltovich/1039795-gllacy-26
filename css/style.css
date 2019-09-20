@@ -77,11 +77,14 @@ body {
   background-color: #849d8f;
 }
 
+.container {
+  width: 1146px;
+  margin: 0 auto;
+}
+
 .header {
   display: flex;
   flex-direction: column;
-  width: 1146px;
-  margin: auto;
 }
 
 .header-nav {

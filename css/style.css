@@ -820,7 +820,32 @@ body {
     linear-gradient(to bottom, #e74a35, #f26843);
 }
 
-.contacts__container {
+.contacts {
+  position: relative;
+
+  width: 1200px;
+  height: 430px;
+  margin: 0 auto;
+  margin-top: 40px;
+}
+
+.contacts_map-img {
+  position: absolute;
+  z-index: -1;
+}
+
+.contacts__wrapper {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.contacts__block {
+  box-sizing: border-box;
+  width: 302px;
+  height: 305px;
+  padding-left: 25px;
+  margin-top: 64px;
+
   font-size: 14px;
   font-weight: 400;
   line-height: 20px;
@@ -830,6 +855,11 @@ body {
   border-radius: 15px;
 }
 
+.contacts__text {
+  margin-top: 28px;
+  margin-bottom: 2px;
+}
+
 .contacts__address {
   font-size: 18px;
   font-weight: 700;
@@ -837,7 +867,13 @@ body {
   font-style: inherit;
 }
 
-.contacts__tel {
+.contacts__tel-block {
+  margin-top: 15px;
+
+  line-height: 25px;
+}
+
+.contacts__tel-number {
   font-size: 18px;
   font-weight: 700;
   text-decoration: none;
@@ -845,13 +881,17 @@ body {
 }
 
 .contacts__button {
+  width: 252px;
+  height: 44px;
+  margin-top: 7px;
+
   font-size: 18px;
   font-weight: 700;
   line-height: 24px;
   color: #fefefe;
 
   border: none;
-  border-radius: 15px;
+  border-radius: 30px;
   box-shadow: 0px 2px 2px 0 rgba(85, 8, 0, 0.54);
   background-image: linear-gradient(to top, #ca3824, #f26843);
 }
@@ -870,9 +910,26 @@ body {
     linear-gradient(to bottom, #e74a35, #f26843);
 }
 
+.main-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 103px;
+}
+
 .main-footer__social-list,
 .main-footer-nav__list {
   list-style: none;
+}
+
+.main-footer__social-list {
+  display: flex;
+  padding: 0;
+  margin-top: 28px;
+}
+
+.main-footer__social-item:not(:first-child) {
+  margin-left: 11px;
 }
 
 .main-footer__social-icon {
@@ -894,10 +951,27 @@ body {
   border: 3px solid rgba(255, 255, 255, 0.7);
 }
 
+.main-footer-nav__list {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+  height: 50px;
+  padding: 0;
+  margin-top: 28px;
+  margin-right: 104px;
+}
+
+.main-footer-nav__item {
+  margin-right: 30px;
+}
+
 .main-footer-nav__link {
   font-size: 13px;
   font-weight: 400;
-  line-height: 18px;
+  line-height: 22px;
   text-decoration: none;
   color: #fff;
 
@@ -909,10 +983,17 @@ body {
 }
 
 .main-footer__copy-right {
+  margin-top: 8px;
+
   font-size: 12px;
   font-weight: 400;
   line-height: 18px;
   color: #fefefe;
+}
+
+.main-footer-copy-right__link--img {
+  display: block;
+  width: 180px;
 }
 
 .main-footer-copy-right__link {
@@ -931,6 +1012,10 @@ body {
 }
 
 .main-footer-nav__svg {
+  position: absolute;
+  left: -22px;
+  bottom: 32px;
+
   fill: #fff;
 }
 

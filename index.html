@@ -75,9 +75,9 @@
       <a class="header__schedule--tel" href="tel:+78124502525">8 812 450-25-25</a>
     </p>
   </header>
-  <main class="container">
+  <main>
     <h1 class="visually-hidden">Мороженое собственного производства</h1>
-    <section class="slide">
+    <section class="slide container">
       <figure class="slide__figure">
         <img class="slide__image" src="img/Slide1.png" width="1045" height="881"
           alt="Крем-брюле и пломбир с малиновым джемом">
@@ -113,7 +113,7 @@
         <button class="slide__button" type="button">Давайте оба!</button>
       </div>
     </section>
-    <section class="promotions">
+    <section class="promotions container">
       <h2 class="visually-hidden">Акции</h2>
       <section class="promotions__raspberry">
         <h3>Малинка даром!</h3>
@@ -127,7 +127,7 @@
         <a class="promotions__button" href="">Хочу шоколадки!</a>
       </section>
     </section>
-    <section class="catalog">
+    <section class="catalog container">
       <h2 class="visually-hidden">Каталог мороженого</h2>
       <ul class="catalog__list">
         <li class="catalog__item">
@@ -184,7 +184,7 @@
         </li>
       </ul>
     </section>
-    <section class="advantages">
+    <section class="advantages container">
       <h2 class="visually-hidden">Преимущества</h2>
       <h3 class="advantages__heading">Магазин Глэйси — это онлайн- и офлайн-магазин по продаже мороженого собственного
         производства на развес</h3>
@@ -213,7 +213,7 @@
         </li>
       </ul>
     </section>
-    <div class="wrapper__blog-and-subscription">
+    <div class="wrapper__blog-and-subscription container">
       <article class="blog">
         <h2 class="blog__heading">Новое в нашем блоге</h2>
         <p class="blog_text">
@@ -241,26 +241,29 @@
     <section class="contacts">
       <h2 class="visually-hidden">Контактная информация</h2>
       <p>
-        <img src="img/map.png" alt="ул. Большая Конюшенная 19/8, Санкт-Петербург">
+        <img class="contacts_map-img" src="img/map.png" width="1200" height="430"
+          alt="ул. Большая Конюшенная 19/8, Санкт-Петербург">
       </p>
-      <div class="contacts__container">
-        <p class="contacts__text">
-          Адрес главного офиса<br>
-          и офлайн-магазина:
-        </p>
-        <address class="contacts__address">
-          ул. Большая Конюшенная<br>19/8, Санкт-Петербург
-        </address>
-        <p>
-          Для заказов по телефону:<br>
-          <a class="contacts__tel" href="tel:+78124502525">8 812 450-25-25</a><br>
-          (с 10 до 20 ежедневно)
-        </p>
-        <button class="contacts__button" type="button">Форма обратной связи</button>
+      <div class="contacts__wrapper container">
+        <div class="contacts__block">
+          <p class="contacts__text">
+            Адрес главного офиса<br>
+            и офлайн-магазина:
+          </p>
+          <address class="contacts__address">
+            ул. Большая Конюшенная<br>19/8, Санкт-Петербург
+          </address>
+          <p class="contacts__tel-block">
+            Для заказов по телефону:<br>
+            <a class="contacts__tel-number" href="tel:+78124502525">8 812 450-25-25</a><br>
+            (с 10 до 20 ежедневно)
+          </p>
+          <button class="contacts__button" type="button">Форма обратной связи</button>
+        </div>
       </div>
     </section>
   </main>
-  <footer class="main-footer">
+  <footer class="main-footer container">
     <ul class="main-footer__social-list">
       <li class="main-footer__social-item">
         <a class="main-footer__social-link" href="" target="_blank">
@@ -309,7 +312,7 @@
         </a>
       </li>
     </ul>
-    <nav class="main-footer__nav main-footer-nav">
+    <nav class="main-footer__nav">
       <ul class="main-footer-nav__list">
         <li class="main-footer-nav__item">
           <span class="main-footer-nav__item--heart">
@@ -327,10 +330,13 @@
       </ul>
     </nav>
     <p class="main-footer__copy-right main-footer-copy-right">
-      <a href="https://htmlacademy.ru/intensive/htmlcss"><img src="img/logo-htmlacademy-small.svg" width="108"
-          height="39" alt="html academy"></a>
-      Сделано в <a class="main-footer-copy-right__link" href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a>
-      © 2019
+      <a class="main-footer-copy-right__link--img" href="https://htmlacademy.ru/intensive/htmlcss"><img
+          src="img/logo-htmlacademy-small.svg" width="108" height="39" alt="html academy"></a>
+      <span>
+        Сделано в <a class="main-footer-copy-right__link" href="https://htmlacademy.ru/intensive/htmlcss">HTML
+          Academy</a>
+        © 2019
+      </span>
     </p>
   </footer>
   <section class="temporarily-hidden">

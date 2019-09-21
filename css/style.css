@@ -289,7 +289,7 @@ body {
 .slide__image {
   position: absolute;
   top: 0px;
-  left: 111px;
+  left: calc(auto + 15px);
   z-index: -1;
 }
 

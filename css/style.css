@@ -459,7 +459,6 @@ body {
 
 .catalog {
   margin-top: 34px;
-  margin-bottom: -70px;
 }
 
 .catalog__list {
@@ -636,6 +635,7 @@ body {
   flex-direction: column;
   justify-content: flex-start;
   height: 306px;
+  margin-top: -70px;
   margin-bottom: 40px;
 
   background-color: #f2e9d8;

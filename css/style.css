@@ -517,7 +517,7 @@ body {
   font-size: 45px;
   font-weight: 700;
   line-height: 45px;
-  word-spacing: -3px;
+  word-spacing: -7px;
   color: #fff;
 
   text-shadow: 1px 1px 3px rgba(49, 50, 53, 0.5);
@@ -636,6 +636,7 @@ body {
   flex-direction: column;
   justify-content: flex-start;
   height: 306px;
+  margin-bottom: 40px;
 
   background-color: #f2e9d8;
   background-image: url("../img/wafer.jpg");
@@ -685,9 +686,16 @@ body {
   color: #323232;
 }
 
+.wrapper__blog-and-subscription {
+  display: flex;
+  justify-content: space-between;
+}
+
 .blog {
+  box-sizing: border-box;
   width: 560px;
   height: 220px;
+  padding-left: 20px;
 
   background-color: #fff;
   background-image: url("../img/strawberry.jpg");
@@ -697,14 +705,21 @@ body {
   border-radius: 15px;
 }
 
-.blog h2 {
+.blog__heading {
+  margin-top: 24px;
+  margin-bottom: 0;
+
   font-size: 16px;
   font-weight: 500;
   line-height: 22px;
   color: #323232;
 }
 
-.blog a {
+.blog_text {
+  margin-top: 5px;
+}
+
+.blog_link {
   font-size: 24px;
   font-weight: 700;
   line-height: 30px;
@@ -720,8 +735,10 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  box-sizing: border-box;
   width: 560px;
   height: 220px;
+  padding: 5px;
 
   border-radius: 15px;
   background-color: #f8f7f4;
@@ -732,21 +749,39 @@ body {
 }
 
 .subscription__container {
-  width: 550px;
-  height: 210px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  height: 100%;
+  padding-right: 15px;
+  padding-left: 20px;
 
   background-color: #f8f7f4;
   border-radius: 15px;
 }
 
 .subscription__text {
+  margin-top: 30px;
+
   font-size: 16px;
   font-weight: 400;
   line-height: 22px;
   color: #5a5a5a;
 }
 
+.subscription__form {
+  margin-bottom: 34px;
+}
+
 .subscription__form input[type="email"] {
+  box-sizing: border-box;
+  width: 368px;
+  height: 44px;
+  margin-right: 8px;
+  padding-left: 14px;
+  padding-right: 14px;
+
   font-size: 16px;
   font-weight: 400;
   line-height: 24px;
@@ -756,14 +791,17 @@ body {
   background-color: #ffffff;
 }
 
-.subscription__form button {
+.subscription__button {
+  width: 129px;
+  height: 44px;
+
   font-size: 18px;
   font-weight: 700;
   line-height: 24px;
   color: #fefefe;
 
   border: none;
-  border-radius: 15px;
+  border-radius: 30px;
   box-shadow: 0px 2px 2px 0 rgba(85, 8, 0, 0.54);
   background-image: linear-gradient(to top, #ca3824, #f26843);
 }

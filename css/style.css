@@ -284,10 +284,6 @@ body {
   margin-bottom: 28px;
 }
 
-.slider__pager-wrapper {
-  display: flex;
-}
-
 .slide__button {
   width: 280px;
   height: 64px;
@@ -319,31 +315,29 @@ body {
     linear-gradient(to bottom, #e74a35, #f26843);
 }
 
+.slider__pager-wrapper {
+  display: flex;
+  align-items: center;
+}
+
 .slider__pager-button {
+  width: 20px;
+  height: 20px;
   padding: 0;
   margin-right: 9px;
 
-  border: none;
+  border: 2px solid #fff;
+  border-radius: 50%;
   background-color: rgba(0, 0, 0, 0)
 }
 
-.slider__pager-item {
-  display: block;
-
-  width: 20px;
-  height: 20px;
-
-  border-radius: 50%;
-  border: 2px solid #fff;
-}
-
-.slider__pager-item:hover {
+.slider__pager-button:hover {
   background-color: rgba(255, 255, 255, 0.4);
 }
 
-.slider__pager-item--current,
-.slider__pager-item--current:hover,
-.slider__pager-item:active {
+.slider__pager-button--current,
+.slider__pager-button--current:hover,
+.slider__pager-button:active {
   background-color: #fff;
 }
 

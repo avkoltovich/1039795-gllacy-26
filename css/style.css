@@ -64,6 +64,24 @@ body {
   border-radius: 20px;
 }
 
+.header-nav__item:hover {
+  padding: 0;
+
+  background-color: #f7f6f3;
+}
+
+/* "передаем" padding ссылке, чтобы увеличить область действия */
+.header-nav__item:hover .header-nav__link {
+  padding-top: 6px;
+  padding-right: 13px;
+  padding-bottom: 6px;
+  padding-left: 14px;
+
+  color: #323232;
+
+  border-bottom: none;
+}
+
 .header-nav__link {
   display: block;
 
@@ -76,24 +94,7 @@ body {
   border-bottom: 1px solid rgba(255, 255, 255, 0.3);
 }
 
-.header-nav__item:hover {
-  padding: 0;
-
-  background-color: #f7f6f3;
-}
-
-.header-nav__item:hover .header-nav__link {
-  padding-top: 6px;
-  padding-right: 13px;
-  padding-bottom: 6px;
-  padding-left: 14px;
-
-  color: #323232;
-
-  border-bottom: none;
-}
-
-.header-nav__item:active .header-nav__link {
+.header-nav__link:active {
   padding-top: 6px;
   padding-right: 13px;
   padding-bottom: 6px;

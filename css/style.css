@@ -818,7 +818,6 @@ body {
 .advantages {
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
   height: 306px;
   margin-top: -60px;
   margin-bottom: 40px;
@@ -832,9 +831,10 @@ body {
 }
 
 .advantages__heading {
-  margin-top: 27px;
-  margin-bottom: -9px;
-  margin-left: 21px;
+  margin: 0;
+  margin-top: 25px;
+  margin-left: 20px;
+  margin-bottom: 9px;
 
   font-size: 24px;
   font-weight: 500;
@@ -845,30 +845,50 @@ body {
 .advantages__list {
   display: flex;
   flex-direction: row;
-  align-items: space-between;
   flex-wrap: wrap;
+  justify-content: space-evenly;
   padding: 0;
-  margin-left: 20px;
+  margin: 0;
 
   list-style: none;
 }
 
 .advantages__item {
-  display: flex;
-  align-items: flex-start;
-  max-width: 50%;
+  width: 50%;
+  margin-bottom: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
-.advantages__item p {
-  margin-top: 12px;
-  margin-right: 29px;
-  margin-bottom: 10px;
-  margin-left: 9px;
+.advantages__item:nth-child(2n) {
+  padding-left: 12px;
+  padding-right: 22px;
+}
+
+.advantages__cell {
+  margin: 0;
 
   font-size: 16px;
   font-weight: 400;
   line-height: 22px;
   color: #323232;
+}
+
+.advantages__icon {
+  display: inline-block;
+  width: 49px;
+  height: 49px;
+
+  vertical-align: top;
+}
+
+.advantages__text {
+  display: inline-block;
+  width: 478px;
+  margin-top: 12px;
+  margin-left: 2px;
+
+  vertical-align: bottom;
 }
 
 .wrapper__blog-and-subscription {

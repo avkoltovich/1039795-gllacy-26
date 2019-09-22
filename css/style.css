@@ -735,7 +735,7 @@ body {
   line-height: 18px;
   color: #fff;
 
-  border-radius: 50%;
+  
 }
 
 .catalog-pagination__item:not(:last-child) {
@@ -747,6 +747,8 @@ body {
 }
 
 .catalog-pagination__link {
+  position: relative;
+
   display: flex;
   justify-content: center;
   align-items: center;
@@ -755,6 +757,24 @@ body {
 
   text-decoration: none;
   color: inherit;
+  border-radius: 50%;
+}
+
+/* костыль для IE11, чтобы срабатывал псевдокласс :active */
+.catalog-pagination__link::before {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+
+  display: block;
+  width: 26px;
+  height: 26px;
+  content: "";
+
+  border-radius: 50%;
 }
 
 .catalog-pagination__svg-left,
@@ -770,29 +790,29 @@ body {
   opacity: 0.2;
 }
 
-.catalog-pagination__item:active .catalog-pagination__svg-right,
-.catalog-pagination__item:active .catalog-pagination__svg-left {
+.catalog-pagination__link:active .catalog-pagination__svg-right,
+.catalog-pagination__link:active .catalog-pagination__svg-left {
   fill: #323232;
 }
 
-.catalog-pagination__item:active .catalog-pagination__svg--disabled {
+.catalog-pagination__link:active .catalog-pagination__svg--disabled {
   fill: #fff;
 }
 
-.catalog-pagination__item:hover {
+.catalog-pagination__link:hover {
   background-color: rgba(255, 255, 255, 0.2);
 }
 
-.catalog-pagination__item--current,
-.catalog-pagination__item--current:hover,
-.catalog-pagination__item:active {
+.catalog-pagination__link--current,
+.catalog-pagination__link--current:hover,
+.catalog-pagination__link:active {
   color: #323232;
 
   background-color: #fff;
 }
 
-.catalog-pagination__item--disabled:hover,
-.catalog-pagination__item--disabled:active {
+.catalog-pagination__link--disabled:hover,
+.catalog-pagination__link--disabled:active {
   background-color: rgba(255, 255, 255, 0);
 }
 

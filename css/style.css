@@ -1207,6 +1207,13 @@ body {
   border-bottom: 1px solid rgba(255, 255, 255, 0.3);
 }
 
+.main-footer-nav__link:hover,
+.main-footer-nav__link:active {
+  color: #ffbc9e;
+
+  border-bottom: 1px solid rgba(255, 188, 158, 0.3);
+}
+
 .main-footer-nav__link--bold {
   font-weight: 700;
 }
@@ -1232,8 +1239,6 @@ body {
   border-bottom: 1px solid rgba(255, 255, 255, 0.3);
 }
 
-.main-footer-nav__link:hover,
-.main-footer-nav__link:active,
 .main-footer-copy-right__link:hover {
   color: #ffbc9e;
 
@@ -1248,7 +1253,7 @@ body {
   fill: #fff;
 }
 
-.main-footer-nav__item--heart:hover .main-footer-nav__svg {
+.main-footer-nav__link:hover + .main-footer-nav__svg {
   fill: red;
 }
 

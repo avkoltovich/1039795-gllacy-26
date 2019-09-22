@@ -1,4 +1,6 @@
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
@@ -186,18 +188,18 @@ body {
 }
 
 /* прячем заливку корзины, когда она пустая */
-.header-nav__svg > .svg-cart--fill {
+.header-nav__svg>.svg-cart--fill {
   display: none;
 }
 
 /* меняем цвет заливки, когда корзина полная */
-.header-nav__button--full-cart .header-nav__svg > .svg-cart--fill {
+.header-nav__button--full-cart .header-nav__svg>.svg-cart--fill {
   display: block;
   fill: #E84D37;
 }
 
 /* меняем цвет линий корзины, когда она полная */
-.header-nav__button--full-cart .header-nav__svg > .svg-cart--contour {
+.header-nav__button--full-cart .header-nav__svg>.svg-cart--contour {
   fill: #323232;
 }
 
@@ -418,7 +420,7 @@ body {
 
   width: 176px;
   height: 4px;
-  
+
   content: "";
   opacity: 0.5;
   background-color: #f8f7f4;
@@ -431,7 +433,7 @@ body {
   width: 107px;
   height: 4px;
   margin-left: -16px;
-  
+
   content: "";
   background-color: #f8f7f4;
 }
@@ -734,22 +736,43 @@ body {
 }
 
 .catalog-pagination {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-top: -18px;
+  padding-left: 0;
+  padding-bottom: 30px;
+
   list-style: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 .catalog-pagination__item {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 26px;
-  height: 26px;
-
   font-size: 16px;
   font-weight: 500;
   line-height: 18px;
   color: #fff;
 
   border-radius: 50%;
+}
+
+.catalog-pagination__item:not(:last-child) {
+  margin-right: 4px;
+}
+
+.catalog-pagination__item:last-child {
+  margin-right: -8px;
+}
+
+.catalog-pagination__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 26px;
+  height: 26px;
+
+  text-decoration: none;
+  color: inherit;
 }
 
 .catalog-pagination__svg-left,
@@ -763,11 +786,6 @@ body {
 
 .catalog-pagination__svg--disabled {
   opacity: 0.2;
-}
-
-.catalog-pagination__item a {
-  text-decoration: none;
-  color: inherit;
 }
 
 .catalog-pagination__item:active .catalog-pagination__svg-right,

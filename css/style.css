@@ -734,8 +734,6 @@ body {
   font-weight: 500;
   line-height: 18px;
   color: #fff;
-
-  
 }
 
 .catalog-pagination__item:not(:last-child) {
@@ -767,7 +765,7 @@ body {
   right: 0;
   bottom: 0;
   left: 0;
-  z-index: 1;
+  z-index: 0;
 
   display: block;
   width: 26px;

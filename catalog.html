@@ -17,7 +17,8 @@
         <a class="header-nav__link--logo" href="index.html"><img src="img/gllacy.svg" width="154" height="64"
             alt="Gllacy Shop"></a>
         <ul class="header-nav__menu">
-          <li class="header-nav__item header-nav__item--current"><a class="header-nav__link header-nav__link--current" href="catalog.html">Каталог</a>
+          <li class="header-nav__item header-nav__item--current"><a class="header-nav__link header-nav__link--current"
+              href="catalog.html">Каталог</a>
             <ul class="header-nav__submenu nav-submenu">
               <li class="nav-submenu__item"><a class="nav-submenu__link" href=""><b>Новинки</b></a></li>
               <li class="nav-submenu__item"><a class="nav-submenu__link" href="">Сливочное</a></li>
@@ -102,46 +103,54 @@
         </fieldset>
         <fieldset class="filter__price">
           <legend class="filter__name">Цена: 100 руб. – 500 руб.</legend>
-          <div class="filter__range filter-range">
-            <button class="filter-range__button" type="button">
+          <div class="filter__wrapper filter__wrapper--range">
+            <button class="filter-range__button filter-range__button--left" type="button">
               <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
-                <path fill="#ABABAB" d="M10 20C4.477 20 0 15.522 0 10v2c0 5.522 4.477 10 10 10 5.522 0 10-4.478 10-10v-2c0 5.522-4.478 10-10 10z" opacity=".3"/>
-                <circle cx="10" cy="10" r="10" fill="#FFF"/>
-                <circle cx="10" cy="10" r="2" fill="#ABABAB"/>
-            </svg>
+                <path fill="#ABABAB"
+                  d="M10 20C4.477 20 0 15.522 0 10v2c0 5.522 4.477 10 10 10 5.522 0 10-4.478 10-10v-2c0 5.522-4.478 10-10 10z"
+                  opacity=".3" />
+                <circle cx="10" cy="10" r="10" fill="#FFF" />
+                <circle cx="10" cy="10" r="2" fill="#ABABAB" />
+              </svg>
             </button>
-            <button class="filter-range__button" type="button">
+            <button class="filter-range__button filter-range__button--right" type="button">
               <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
-                <path fill="#ABABAB" d="M10 20C4.477 20 0 15.522 0 10v2c0 5.522 4.477 10 10 10 5.522 0 10-4.478 10-10v-2c0 5.522-4.478 10-10 10z" opacity=".3"/>
-                <circle cx="10" cy="10" r="10" fill="#FFF"/>
-                <circle cx="10" cy="10" r="2" fill="#ABABAB"/>
-            </svg>
+                <path fill="#ABABAB"
+                  d="M10 20C4.477 20 0 15.522 0 10v2c0 5.522 4.477 10 10 10 5.522 0 10-4.478 10-10v-2c0 5.522-4.478 10-10 10z"
+                  opacity=".3" />
+                <circle cx="10" cy="10" r="10" fill="#FFF" />
+                <circle cx="10" cy="10" r="2" fill="#ABABAB" />
+              </svg>
             </button>
           </div>
         </fieldset>
         <fieldset class="filter__fat">
           <legend class="filter__name">Жирность:</legend>
-          <input type="radio" name="0" id="fat-0">
-          <label for="fat-0">0%</label>
-          <input type="radio" name="10" id="fat-10" checked>
-          <label for="fat-10">до 10%</label>
-          <input type="radio" name="less30" id="fat-less30">
-          <label for="fat-less30">до 30%</label>
-          <input type="radio" name="more30" id="fat-more30">
-          <label for="fat-more30">выше 30%</label>
+          <div class="filter__wrapper filter__wrapper--fat">
+            <input type="radio" name="0" id="fat-0">
+            <label for="fat-0">0%</label>
+            <input type="radio" name="10" id="fat-10" checked>
+            <label for="fat-10">до 10%</label>
+            <input type="radio" name="less30" id="fat-less30">
+            <label for="fat-less30">до 30%</label>
+            <input type="radio" name="more30" id="fat-more30">
+            <label for="fat-more30">выше 30%</label>
+          </div>
         </fieldset>
         <fieldset class="filter__filler">
           <legend class="filter__name">Наполнители:</legend>
-          <input type="checkbox" name="chocolate" id="filler-chocolate" checked>
-          <label for="filler-chocolate">шоколадные</label>
-          <input type="checkbox" name="sugar" id="filler-sugar" checked>
-          <label for="filler-sugar">сахарные присыпки</label>
-          <input type="checkbox" name="fruit" id="filler-fruit">
-          <label for="filler-fruit">фрукты</label>
-          <input type="checkbox" name="syrup" id="filler-syrup">
-          <label for="filler-syrup">сиропы</label>
-          <input type="checkbox" name="jam" id="filler-jam">
-          <label for="filler-jam">джемы</label>
+          <div class="filter__wrapper filter__wrapper--filler">
+            <input type="checkbox" name="chocolate" id="filler-chocolate" checked>
+            <label for="filler-chocolate">шоколадные</label>
+            <input type="checkbox" name="sugar" id="filler-sugar" checked>
+            <label for="filler-sugar">сахарные присыпки</label>
+            <input type="checkbox" name="fruit" id="filler-fruit">
+            <label for="filler-fruit">фрукты</label>
+            <input type="checkbox" name="syrup" id="filler-syrup">
+            <label for="filler-syrup">сиропы</label>
+            <input type="checkbox" name="jam" id="filler-jam">
+            <label for="filler-jam">джемы</label>
+          </div>
         </fieldset>
         <button class="filter__button" type="submit">Применить</button>
       </form>

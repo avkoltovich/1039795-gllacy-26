@@ -336,30 +336,31 @@ body {
 .filter__form {
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
+  align-items: flex-start;
   margin-top: 25px;
 }
 
 .filter__form fieldset {
   padding: 0;
-  margin: 0;
+  margin-right: 12px;
 
   border: none;
 }
 
 .filter__name {
-  margin-left: 18px;
+  margin-left: 15px;
 
   font-size: 14px;
   font-weight: 500;
   line-height: 16px;
+
+  margin-bottom: 6px;
 }
 
 .filter__sorting select {
   width: 194px;
   height: 37px;
-  margin-top: 6px;
-  padding-left: 14px;
+  padding-left: 4px;
 
   color: #fff;
   font-size: 16px;
@@ -367,19 +368,50 @@ body {
   line-height: 18px;
 
   background-color: rgba(255, 255, 255, 0.2);
-  border: none;
+  /* При помощи рамки отодвинул значок выпадающего списка */
+  border: 8px solid rgba(255, 255, 255, 0);
   border-radius: 20px;
 }
 
-.filter__range {
+.filter__wrapper {
   display: flex;
+  justify-content: center;
   align-items: center;
-  width: 220px;
-  height: 37px;
 
   background-color: rgba(255, 255, 255, 0.2);
   border: none;
   border-radius: 20px;
+}
+
+.filter__wrapper--range {
+  position: relative;
+
+  width: 220px;
+  height: 37px;
+}
+
+.filter__wrapper--range::before {
+  position: absolute;
+  z-index: -2;
+
+  width: 176px;
+  height: 4px;
+  
+  content: "";
+  opacity: 0.5;
+  background-color: #f8f7f4;
+}
+
+.filter__wrapper--range::after {
+  position: absolute;
+  z-index: -1;
+
+  width: 107px;
+  height: 4px;
+  margin-left: -16px;
+  
+  content: "";
+  background-color: #f8f7f4;
 }
 
 .filter-range__button {
@@ -393,15 +425,32 @@ body {
 }
 
 .filter-range__button--left {
-
+  margin-left: -30px;
 }
 
 .filter-range__button--right {
-  
+  margin-left: 78px;
+}
+
+.filter__wrapper--fat {
+  width: 415px;
+  height: 37px;
+}
+
+.filter__filler {
+  margin-top: 15px;
+}
+
+.filter__wrapper--filler {
+  width: 703px;
+  height: 37px;
 }
 
 .filter__button {
-  padding: 10px 30px;
+  align-self: flex-end;
+  width: 144px;
+  height: 37px;
+  padding: 0;
 
   font-size: 16px;
   font-weight: 500;
@@ -409,7 +458,7 @@ body {
   color: #fff;
 
   border: solid 2px #ffffff;
-  border-radius: 15px;
+  border-radius: 30px;
   background-color: rgba(255, 255, 255, 0.2);
 }
 

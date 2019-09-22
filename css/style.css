@@ -486,7 +486,6 @@ body {
 }
 
 .filter__button:active {
-  padding: 12px 32px;
   color: #323232;
 
   border: none;

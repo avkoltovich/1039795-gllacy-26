@@ -179,6 +179,28 @@ body {
   border-radius: 50%;
 }
 
+.header-nav__button--full-cart {
+  color: #323232;
+
+  background-color: #fff;
+}
+
+/* прямчем заливку корзины, когда она пустая */
+.header-nav__svg > .svg-cart--fill {
+  display: none;
+}
+
+/* меняем цвет заливки, когда корзина полная */
+.header-nav__button--full-cart .header-nav__svg > .svg-cart--fill {
+  display: block;
+  fill: #E84D37;
+}
+
+/* меняем цвет линий корзины, когда она полная */
+.header-nav__button--full-cart .header-nav__svg > .svg-cart--contour {
+  fill: #323232;
+}
+
 .header-nav__button:hover,
 .header-nav__button--search:hover {
   color: #323232;

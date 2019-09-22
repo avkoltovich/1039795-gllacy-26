@@ -56,9 +56,9 @@ body {
 }
 
 .header-nav__item {
-  padding-top: 9px;
+  padding-top: 6px;
   padding-right: 13px;
-  padding-bottom: 10px;
+  padding-bottom: 6px;
   padding-left: 14px;
 
   border-radius: 20px;
@@ -83,9 +83,9 @@ body {
 }
 
 .header-nav__item:hover .header-nav__link {
-  padding-top: 9px;
+  padding-top: 6px;
   padding-right: 13px;
-  padding-bottom: 10px;
+  padding-bottom: 6px;
   padding-left: 14px;
 
   color: #323232;
@@ -94,9 +94,9 @@ body {
 }
 
 .header-nav__item:active .header-nav__link {
-  padding-top: 9px;
+  padding-top: 6px;
   padding-right: 13px;
-  padding-bottom: 10px;
+  padding-bottom: 6px;
   padding-left: 14px;
 
   color: #323232;
@@ -107,10 +107,13 @@ body {
   background-color: #ededed;
 }
 
-.header-nav__link--current {
+.header-nav__item--current {
   background-color: #d07058;
   border: none;
-  border-radius: 20px;
+}
+
+.header-nav__link--current {
+  border: none;
 }
 
 .header-nav__submenu {
@@ -207,6 +210,10 @@ body {
 }
 
 .breadcrumbs {
+  display: flex;
+  padding-left: 0;
+  margin-top: -35px;
+
   list-style: none;
 }
 
@@ -215,6 +222,11 @@ body {
   font-weight: 400;
   line-height: 16px;
   color: #fff;
+}
+
+.breadcrumbs__separator {
+  margin-left: 5px;
+  margin-right: 5px;
 }
 
 .breadcrumbs__link {
@@ -314,22 +326,41 @@ body {
 }
 
 .main-heading {
-  font-size: 35px;
+  margin-top: -10px;
+
+  font-size: 34px;
   font-weight: 700;
-  line-height: 41px;
+  line-height: 40px;
+}
+
+.filter__form {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-top: 25px;
 }
 
 .filter__form fieldset {
+  padding: 0;
+  margin: 0;
+
   border: none;
 }
 
 .filter__name {
+  margin-left: 18px;
+
   font-size: 14px;
   font-weight: 500;
   line-height: 16px;
 }
 
 .filter__sorting select {
+  width: 194px;
+  height: 37px;
+  margin-top: 6px;
+  padding-left: 14px;
+
   color: #fff;
   font-size: 16px;
   font-weight: 500;
@@ -337,7 +368,36 @@ body {
 
   background-color: rgba(255, 255, 255, 0.2);
   border: none;
-  border-radius: 15px;
+  border-radius: 20px;
+}
+
+.filter__range {
+  display: flex;
+  align-items: center;
+  width: 220px;
+  height: 37px;
+
+  background-color: rgba(255, 255, 255, 0.2);
+  border: none;
+  border-radius: 20px;
+}
+
+.filter-range__button {
+  width: 20px;
+  height: 20px;
+  padding: 0;
+  margin: 0;
+
+  border: none;
+  background-color: rgba(255, 255, 255, 0);
+}
+
+.filter-range__button--left {
+
+}
+
+.filter-range__button--right {
+  
 }
 
 .filter__button {

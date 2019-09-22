@@ -52,6 +52,7 @@ body {
 
 .header-nav__menu {
   display: flex;
+  flex-wrap: wrap;
   padding: 0;
   margin-left: 10px;
   margin-top: 9px;

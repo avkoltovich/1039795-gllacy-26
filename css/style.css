@@ -984,12 +984,12 @@ body {
 .blog {
   box-sizing: border-box;
   width: 560px;
-  height: 220px;
+  min-height: 220px;
   padding-left: 20px;
 
   background-color: #fff;
   background-image: url("../img/strawberry.jpg");
-  background-size: contain;
+  background-size: cover;
   background-position: 0 0;
   background-repeat: no-repeat;
   border-radius: 15px;
@@ -1027,13 +1027,13 @@ body {
   align-items: center;
   box-sizing: border-box;
   width: 560px;
-  height: 220px;
+  min-height: 220px;
   padding: 5px;
 
   border-radius: 15px;
   background-color: #f8f7f4;
   background-image: url("../img/border.png");
-  background-size: contain;
+  background-size: cover;
   background-position: 0 0;
   background-repeat: no-repeat;
 }
@@ -1114,7 +1114,7 @@ body {
   position: relative;
 
   width: 1200px;
-  height: 430px;
+  min-height: 430px;
   margin: 0 auto;
   margin-top: 40px;
 }
@@ -1132,7 +1132,7 @@ body {
 .contacts__block {
   box-sizing: border-box;
   width: 302px;
-  height: 305px;
+  min-height: 305px;
   padding-left: 25px;
   margin-top: 64px;
 
@@ -1204,7 +1204,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 103px;
+  min-height: 103px;
 }
 
 .main-footer__social-list,

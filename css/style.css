@@ -601,7 +601,7 @@ body {
 }
 
 .promotions__text {
-  margin-top: 0;
+  margin-top: 16px;
 
   font-size: 18px;
   font-weight: 700;
@@ -611,11 +611,9 @@ body {
 
 .promotions__block {
   display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  flex-wrap: wrap;
+  flex-direction: column;
   padding-top: 16px;
-  padding-right: 19px;
+  padding-right: 18px;
   padding-bottom: 23px;
   padding-left: 18px;
 
@@ -641,7 +639,7 @@ body {
 .promotions__button {
   display: block;
   align-self: flex-end;
-  margin-left: auto;
+  margin-top: auto;
   padding-top: 13px;
   padding-right: 25px;
   padding-bottom: 14px;
@@ -904,13 +902,13 @@ body {
 .advantages {
   display: flex;
   flex-direction: column;
-  height: 306px;
+  min-height: 306px;
   margin-top: -10px;
   margin-bottom: 40px;
 
   background-color: #f2e9d8;
   background-image: url("../img/wafer.jpg");
-  background-size: contain;
+  background-size: cover;
   background-position: 0 0;
   background-repeat: no-repeat;
   border-radius: 15px;

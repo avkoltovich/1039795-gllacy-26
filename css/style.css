@@ -42,8 +42,7 @@ body {
   margin-top: 9px;
 }
 
-.header-nav__menu,
-.header-nav__submenu {
+.header-nav__menu {
   list-style: none;
 }
 
@@ -56,6 +55,8 @@ body {
 }
 
 .header-nav__item {
+  position: relative;
+
   padding-top: 6px;
   padding-right: 13px;
   padding-bottom: 6px;
@@ -118,21 +119,104 @@ body {
 }
 
 .header-nav__submenu {
+  position: absolute;
+  top: 37px;
+  left: -6px;
+  z-index: 3;
+
   display: none;
+  flex-direction: column;
+  width: 143px;
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
   box-shadow: 0px 20px 20px 0 rgba(0, 0, 0, 0.4);
   background-color: #f8f7f4;
+  border-radius: 5px;
 }
 
-.header-nav-submenu__item:first-child {
-  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+.header-nav__item--submenu:hover::after {
+  position: absolute;
+  top: 25px;
+  left: -6px;
+  z-index: 1;
+
+  width: 143px;
+  height: 12px;
+  content: "";
 }
 
-.header-nav-submenu__link {
+.header-nav__item--submenu:hover .header-nav__submenu {
+  display: flex;
+}
+
+.nav-submenu__item {
+  position: relative;
+
+  height: 100%;
+}
+
+.nav-submenu__link {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 32px;
+  padding-left: 20px;
+
   font-size: 14px;
   font-weight: 400;
   line-height: 16px;
   text-decoration: none;
   color: #323232;
+}
+
+.nav-submenu__link--bold {
+  font-weight: 700;
+}
+
+.nav-submenu__item:first-child .nav-submenu__link {
+  height: 38px;
+  padding-bottom: 2px;
+  margin-bottom: 1px;
+
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.nav-submenu__item:first-child .nav-submenu__link::before {
+  position: absolute;
+  top: 37px;
+  left: 6px;
+  z-index: 4;
+
+  width: 128px;
+  height: 2px;
+  content: "";
+
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.nav-submenu__item:last-child .nav-submenu__link {
+  height: 36px;
+  padding-bottom: 6px;
+
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.nav-submenu__link:hover {
+  background-color: #fbded7;
+}
+
+.nav-submenu__link:active {
+  color: #fff;
+
+  background-color: #f6b5a5;
+}
+
+.nav-submenu__link--current {
+  background-color: #d07058;
 }
 
 .header-nav__wrapper--user {
@@ -1259,7 +1343,7 @@ body {
   fill: #fff;
 }
 
-.main-footer-nav__link:hover + .main-footer-nav__svg {
+.main-footer-nav__link:hover+.main-footer-nav__svg {
   fill: red;
 }
 

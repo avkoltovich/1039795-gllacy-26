@@ -591,9 +591,8 @@ body {
   margin-top: 41px;
 }
 
-.promotions h3 {
-  margin-top: 16px;
-  margin-left: 18px;
+.promotions__heading {
+  margin: 0;
 
   font-size: 35px;
   font-weight: 700;
@@ -601,56 +600,52 @@ body {
   color: #fff;
 }
 
-.promotions p {
-  margin-top: -20px;
-  margin-left: 19px;
+.promotions__text {
+  margin-top: 0;
 
   font-size: 18px;
   font-weight: 700;
   line-height: 22px;
-  color: #ffffff;
+  color: #fff;
+}
+
+.promotions__block {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  padding-top: 16px;
+  padding-right: 19px;
+  padding-bottom: 23px;
+  padding-left: 18px;
+
+  width: 560px;
+  min-height: 229px;
+
+  background-size: cover;
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  border-radius: 15px;
 }
 
 .promotions__raspberry {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-
-  width: 560px;
-  min-height: 229px;
-
   background-color: #480317;
   background-image: url("../img/raspberry.jpg");
-  background-size: cover;
-  background-position: 0 0;
-  background-repeat: no-repeat;
-  border-radius: 15px;
 }
 
 .promotions__chocolate {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-
-  width: 560px;
-  min-height: 229px;
-
   background-color: #724629;
   background-image: url("../img/chocolate.jpg");
-  background-size: cover;
-  background-position: 0 0;
-  background-repeat: no-repeat;
-  border-radius: 15px;
 }
 
 .promotions__button {
+  display: block;
   align-self: flex-end;
+  margin-left: auto;
   padding-top: 13px;
   padding-right: 25px;
   padding-bottom: 14px;
   padding-left: 22px;
-  margin-top: 27px;
-  margin-right: 19px;
 
   font-size: 18px;
   font-weight: 700;

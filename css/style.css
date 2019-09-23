@@ -28,6 +28,16 @@ body {
   overflow: hidden;
 }
 
+.check__input {
+  position: absolute;
+  left: -20px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+
+  overflow: hidden;
+}
+
 .site-wrapper {
   min-width: 940px;
   background-color: #849d8f;
@@ -59,7 +69,7 @@ body {
   list-style: none;
 }
 
-.slide {
+.slide--disabled {
   display: none;
 }
 
@@ -73,7 +83,7 @@ body {
   font-weight: 800;
 }
 
-.button {
+.slide__button {
   display: inline-block;
   padding: 12px 44px;
 
@@ -95,37 +105,49 @@ body {
   cursor: pointer;
 }
 
-.button:hover {
+.slide__button:hover {
   background: linear-gradient(to bottom, #f58669 0%, #ec6f5e 100%);
   box-shadow: 0 2px 2px rgba(172, 16, 0, 1);
 }
 
-.button:active {
+.slide__button:active {
   background: linear-gradient(to bottom, #d84732 0%, #e1613e 100%);
   box-shadow: inset 0 2px 2px rgba(172, 16, 0, 1);
 }
 
-.slider__controls {
+.slider__control {
   position: absolute;
-  bottom: 22px;
-  left: 0;
+  top: 563px;
   z-index: 20;
-  
-  font-size: 0;
-}
 
-.slider__controls label {
   display: inline-block;
   width: 21px;
   height: 21px;
   margin-right: 8px;
 
+  font-size: 0;
   vertical-align: top;
 
   background-color: transparent;
-  border: 2px solid #ffffff;
+  border: 2px solid #fff;
   border-radius: 50%;
   cursor: pointer;
+}
+
+.slider__control--first {
+  left: calc(50% - 575px);
+}
+
+.slider__control--second {
+  left: calc(50% - 545px);
+}
+
+.slider__control--third {
+  left: calc(50% - 515px);
+}
+
+.slider__control:hover {
+  background-color: rgba(255, 255, 255, 0.4)
 }
 
 #product-1:checked ~ .site-wrapper {
@@ -149,10 +171,36 @@ body {
   display: block;
 }
 
-#product-1:checked ~ .site-wrapper label[for="product-1"],
-#product-2:checked ~ .site-wrapper label[for="product-2"],
-#product-3:checked ~ .site-wrapper label[for="product-3"] {
+#product-1:checked + label[for="product-1"],
+#product-2:checked + label[for="product-2"],
+#product-3:checked + label[for="product-3"] {
   background-color: #fff;
+}
+
+#product-1:focus + label[for="product-1"] {
+  top: 562px;
+  left: calc(50% - 576px);
+
+  box-sizing: content-box;
+
+  border: 1px solid #6896e7;
+}
+
+#product-2:focus + label[for="product-2"] {
+  top: 562px;
+  left: calc(50% - 546px);
+
+  box-sizing: content-box;
+  border: 1px solid #6896e7;
+}
+
+#product-3:focus + label[for="product-3"] {
+  top: 562px;
+  left: calc(50% - 516px);
+
+  box-sizing: content-box;
+
+  border: 1px solid #6896e7;
 }
 
 .header {
@@ -479,82 +527,6 @@ body {
 
   border-bottom: 1px solid rgba(255, 188, 158, 0.3);
 }
-
-/* .slide__image {
-  position: absolute;
-  top: 0px;
-  left: calc(auto + 15px);
-  z-index: -1;
-}
-
-.slide__caption {
-  font-size: 40px;
-  font-weight: 700;
-  line-height: 61px;
-  text-align: center;
-}
-
-.slide__caption h2 {
-  margin-top: 259px;
-  margin-bottom: 28px;
-}
-
-.slide__button {
-  width: 280px;
-  height: 64px;
-  margin: 0 346px;
-
-  font-size: 32px;
-  font-weight: 700;
-  line-height: 44px;
-  text-shadow: 0px 2px 5px rgba(160, 32, 11, 0.76);
-  color: #fff;
-
-  border: none;
-  border-radius: 30px;
-  box-shadow: 0px 2px 2px 0 rgba(172, 16, 0, 0.64);
-  background-image: linear-gradient(to top, #e74a35, #f26843);
-}
-
-.slide__button:hover {
-  box-shadow: 0px 2px 2px 0 #ac1000;
-  background-image:
-    linear-gradient(to bottom, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)),
-    linear-gradient(to top, #e74a35, #f26843);
-}
-
-.slide__button:active {
-  box-shadow: inset 0px 2px 2px 0 #942718;
-  background-image:
-    linear-gradient(to bottom, rgba(0, 0, 0, 0.07), rgba(0, 0, 0, 0.07)),
-    linear-gradient(to bottom, #e74a35, #f26843);
-}
-
-.slider__pager-wrapper {
-  display: flex;
-  align-items: center;
-}
-
-.slider__pager-button {
-  width: 20px;
-  height: 20px;
-  padding: 0;
-  margin-right: 9px;
-
-  border: 2px solid #fff;
-  border-radius: 50%;
-  background-color: rgba(0, 0, 0, 0)
-}
-
-.slider__pager-button:hover {
-  background-color: rgba(255, 255, 255, 0.4);
-}
-
-.slider__pager-button--current,
-.slider__pager-button--current:hover,
-.slider__pager-button:active {
-  background-color: #fff;
-} */
 
 .main-heading {
   margin-top: -10px;

@@ -474,6 +474,7 @@ body {
   border-radius: 20px;
 }
 
+.filter__sorting select:hover,
 .filter__sorting select:focus {
   color: #323232;
 

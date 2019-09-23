@@ -617,11 +617,11 @@ body {
   align-items: flex-start;
 
   width: 560px;
-  height: 229px;
+  min-height: 229px;
 
   background-color: #480317;
   background-image: url("../img/raspberry.jpg");
-  background-size: contain;
+  background-size: cover;
   background-position: 0 0;
   background-repeat: no-repeat;
   border-radius: 15px;
@@ -633,11 +633,11 @@ body {
   align-items: flex-start;
 
   width: 560px;
-  height: 229px;
+  min-height: 229px;
 
   background-color: #724629;
   background-image: url("../img/chocolate.jpg");
-  background-size: contain;
+  background-size: cover;
   background-position: 0 0;
   background-repeat: no-repeat;
   border-radius: 15px;

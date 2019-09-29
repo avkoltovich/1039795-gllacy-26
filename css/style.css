@@ -1744,6 +1744,10 @@ body {
     linear-gradient(to bottom, #e74a35, #f26843);
 }
 
+.contacts__button--send {
+  margin-left: auto;
+}
+
 .contacts__feedback {
   position: absolute;
   top: 0px;

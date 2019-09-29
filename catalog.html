@@ -32,42 +32,121 @@
         </ul>
       </div>
       <div class="header-nav__wrapper header-nav__wrapper--user">
-        <button class="header-nav__button header-nav__button--search" type="button">
-          <svg class="header-nav__svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-            width="17" height="17" viewBox="0 0 17 17">
-            <g>
-              <path
-                d="M16.958 15.527L11.75 10.32A6.455 6.455 0 0 0 13 6.5 6.5 6.5 0 1 0 6.5 13a6.465 6.465 0 0 0 3.839-1.263l5.205 5.204 1.414-1.414zM6.5 11C4.019 11 2 8.981 2 6.5S4.019 2 6.5 2 11 4.019 11 6.5 8.981 11 6.5 11z" />
-            </g>
-          </svg>
-          <span class="visually-hidden">Поиск</span>
-        </button>
-        <a class="header-nav__button" href="">
-          <span>
-            <svg class="header-nav__svg header-nav__svg--oval" xmlns="http://www.w3.org/2000/svg"
-              xmlns:xlink="http://www.w3.org/1999/xlink" width="21" height="19" viewBox="0 0 21 19">
+        <div class="header-nav__search">
+          <button class="header-nav__button header-nav__button--search" type="button">
+            <svg class="header-nav__svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+              width="17" height="17" viewBox="0 0 17 17">
               <g>
-                <path d="M6 14.875L12.917 9.5 6 4.125v2.917H-.042v4.917H6z" />
                 <path
-                  d="M18 0H5C3.9 0 3 .9 3 2v2h2V2h13v15H5v-2H3v2c0 1.1.9 2 2 2h13c1.1 0 2-.9 2-2V2c0-1.1-.9-2-2-2z" />
+                  d="M16.958 15.527L11.75 10.32A6.455 6.455 0 0 0 13 6.5 6.5 6.5 0 1 0 6.5 13a6.465 6.465 0 0 0 3.839-1.263l5.205 5.204 1.414-1.414zM6.5 11C4.019 11 2 8.981 2 6.5S4.019 2 6.5 2 11 4.019 11 6.5 8.981 11 6.5 11z" />
               </g>
             </svg>
-          </span>
-          <span class="header-nav__button-text">Вход</span>
-        </a>
-        <a class="header-nav__button header-nav__button--full-cart" href="">
-          <span>
-            <svg class="header-nav__svg header-nav__svg--oval" xmlns="http://www.w3.org/2000/svg" width="21" height="20"
-              viewBox="0 0 21 20">
-              <path class="svg-cart--fill" d="M5.888 4.031L6.922 13h10.45l1.176-8.969z" />
-              <circle class="svg-cart--contour" cx="6.984" cy="18" r="2" />
-              <circle class="svg-cart--contour" cx="15.984" cy="18" r="2" />
-              <path class="svg-cart--contour"
-                d="M5.657 2.031L5.422 0H0v2h3.64l1.5 13h13.988l1.699-12.969H5.657zM17.372 13H6.922L5.888 4.031h12.66L17.372 13z" />
-            </svg>
-          </span>
-          <span class="header-nav__button-text">2 товара</span>
-        </a>
+            <span class="visually-hidden">Поиск</span>
+          </button>
+          <div class="header-nav__search-block">
+            <form action="https://echo.htmlacademy.ru" method="post">
+              <label class="visually-hidden" for="user-search">Форма поиска</label>
+              <input type="search" name="search" id="user-search" placeholder="Что ищем?">
+            </form>
+          </div>
+        </div>
+        <div class="header-nav__login">
+          <button class="header-nav__button header-nav__button--login" type="button">
+            <span>
+              <svg class="header-nav__svg header-nav__svg--oval" xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink" width="21" height="19" viewBox="0 0 21 19">
+                <g>
+                  <path d="M6 14.875L12.917 9.5 6 4.125v2.917H-.042v4.917H6z" />
+                  <path
+                    d="M18 0H5C3.9 0 3 .9 3 2v2h2V2h13v15H5v-2H3v2c0 1.1.9 2 2 2h13c1.1 0 2-.9 2-2V2c0-1.1-.9-2-2-2z" />
+                </g>
+              </svg>
+            </span>
+            <span class="header-nav__button-text">Вход</span>
+          </button>
+          <div class="header-nav__login-block login-block">
+            <form action="https://echo.htmlacademy.ru" method="post">
+              <label class="" for="user-login">
+                <span class="visually-hidden">Логин</span>
+                <input type="email" name="login" id="user-login" placeholder="Электронная почта">
+              </label>
+              <label class="" for="user-password">
+                <span class="visually-hidden">Пароль</span>
+                <input type="password" name="password" id="user-password" placeholder="Пароль">
+              </label>
+            </form>
+            <div class="login-block__buttons">
+              <button class="login-block__btn" type="submit">Войти</button>
+              <div>
+                <a class="login-block__link" href="#">Забыли пароль?</a>
+                <a class="login-block__link" href="#">Новая регистрация</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="header-nav__cart">
+          <button class="header-nav__button header-nav__button--full-cart" type="button">
+            <span>
+              <svg class="header-nav__svg header-nav__svg--oval" xmlns="http://www.w3.org/2000/svg" width="21"
+                height="20" viewBox="0 0 21 20">
+                <path class="svg-cart--fill" d="M5.888 4.031L6.922 13h10.45l1.176-8.969z" />
+                <circle class="svg-cart--contour" cx="6.984" cy="18" r="2" />
+                <circle class="svg-cart--contour" cx="15.984" cy="18" r="2" />
+                <path class="svg-cart--contour"
+                  d="M5.657 2.031L5.422 0H0v2h3.64l1.5 13h13.988l1.699-12.969H5.657zM17.372 13H6.922L5.888 4.031h12.66L17.372 13z" />
+              </svg>
+            </span>
+            <span class="header-nav__button-text">2 товара</span>
+          </button>
+          <div class="header-nav__cart-block cart-block">
+            <table class="cart-block__table">
+              <caption class="visually-hidden">Содержимое корзины</caption>
+              <tr class="cart-block__row visually-hidden">
+                <th>Удалить позицию</th>
+                <th>Фотография</th>
+                <th>Название</th>
+                <th>Количество</th>
+                <th>Разделитель</th>
+                <th>Стоимость</th>
+                <th>Итого</th>
+              </tr>
+              <tr class="cart-block__row">
+                <td class="cart-block__cell cart-block__cell--delete">
+                  <button class="cart-block__btn cart-block__btn--del" type="button">
+                    <img src="img/delete.svg" width="11" height="11" alt="Удалить">
+                  </button></td>
+                <td class="cart-block__cell cart-block__cell--img">
+                  <img src="img/1-mini.png" width="33" height="33" alt="Пломбир с апельсиновым джемом">
+                </td>
+                <td class="cart-block__cell cart-block__cell--description">Пломбир с апельсиновым джемом</td>
+                <td class="cart-block__cell">1,5 кг</td>
+                <td class="cart-block__cell cart-block__cell--sepr">x</td>
+                <td class="cart-block__cell cart-block__cell--price">200 руб.</td>
+                <td class="cart-block__cell">300 руб.</td>
+              </tr>
+              <tr class="cart-block__row">
+                <td class="cart-block__cell cart-block__cell--delete">
+                  <button class="cart-block__btn cart-block__btn--del" type="button">
+                    <img src="img/delete.svg" width="11" height="11" alt="Удалить">
+                  </button>
+                </td>
+                <td class="cart-block__cell cart-block__cell--img">
+                  <img src="img/3-mini.png" width="33" height="33"
+                    alt="Клубничный пломбир с присыпкой из белого шоколада">
+                </td>
+                <td class="cart-block__cell cart-block__cell--description">Клубничный пломбир с присыпкой из белого шоколада</td>
+                <td class="cart-block__cell">1,5 кг</td>
+                <td class="cart-block__cell cart-block__cell--sepr">x</td>
+                <td class="cart-block__cell cart-block__cell--price">300 руб.</td>
+                <td class="cart-block__cell">450 руб.</td>
+              </tr>
+              <tr class="cart-block__row">
+                <td class="cart-block__cell cart-block__cell--total" colspan="7">Итого: 750 руб.</td>
+              </tr>
+            </table>
+            <button class="cart-block__btn cart-block__btn--buy" type="button">Оформить заказ</button>
+          </div>
+        </div>
       </div>
     </nav>
     <p class="header__schedule">

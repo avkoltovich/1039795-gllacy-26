@@ -935,7 +935,6 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between;
   width: 100%;
   padding-top: 6px;
 }
@@ -943,7 +942,7 @@ body {
 .catalog__hover-aria:hover {
   z-index: 1;
 
-  min-height: 405px;
+  padding-bottom: 22px;
 
   border-radius: 5px;
   box-shadow: 0 20px 20px rgba(0, 0, 0, 0.4);
@@ -1011,7 +1010,7 @@ body {
   align-self: center;
   width: 200px;
   height: 44px;
-  margin-bottom: 22px;
+  margin-top: 15px;
 
   font-size: 18px;
   font-weight: 700;

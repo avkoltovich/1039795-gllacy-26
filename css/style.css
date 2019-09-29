@@ -516,6 +516,8 @@ body {
 }
 
 .filter__form fieldset {
+  position: relative;
+
   padding: 0;
   margin-right: 12px;
 
@@ -532,10 +534,27 @@ body {
   margin-bottom: 6px;
 }
 
+/* Предзагрузка картинки */
+.filter__sorting::before {
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+  content: "";
+
+  opacity: 0;
+  overflow: hidden;
+  background-image: url("../img/select-hover.svg");
+}
+
 .filter__sorting select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+
   width: 194px;
   height: 37px;
-  padding-left: 4px;
+  padding-left: 10px;
 
   color: #fff;
   font-size: 16px;
@@ -543,9 +562,15 @@ body {
   line-height: 18px;
 
   background-color: rgba(255, 255, 255, 0.2);
-  /* При помощи рамки отодвинул значок выпадающего списка */
-  border: 8px solid rgba(255, 255, 255, 0);
+  background-image: url("../img/select.svg");
+  background-repeat: no-repeat;
+  background-position: 168px 14px;
+  border: none;
   border-radius: 20px;
+}
+
+.filter__sorting select::-ms-expand {
+  display: none;
 }
 
 .filter__sorting select:hover,
@@ -553,11 +578,11 @@ body {
   color: #323232;
 
   background-color: #f8f7f4;
+  background-image: url("../img/select-hover.svg");
 }
 
 .filter__wrapper {
   display: flex;
-  justify-content: space-between;
   align-items: center;
 
   background-color: rgba(255, 255, 255, 0.2);
@@ -599,13 +624,17 @@ body {
 }
 
 .filter-range__button {
-  width: 20px;
-  height: 20px;
+  width: 21px;
+  height: 21px;
   padding: 0;
   margin: 0;
 
   border: none;
-  background-color: rgba(255, 255, 255, 0);
+  background-color: transparent;
+  background-image: url("../img/range-btn.svg");
+  background-repeat: no-repeat;
+  background-size: 20px 20px;
+  cursor: pointer;
 }
 
 .filter-range__button--left {
@@ -617,8 +646,74 @@ body {
 }
 
 .filter__wrapper--fat {
-  width: 415px;
+  min-width: 415px;
   height: 37px;
+  padding-left: 10px;
+}
+
+.filter__fat label {
+  position: relative;
+
+  display: block;
+  
+  padding-right: 15px;
+  padding-left: 33px;
+}
+
+.filter__fat label::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+
+  width: 22px;
+  height: 22px;
+  content: "";
+
+  background-image: url("../img/radio-on.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  opacity: 0;
+} 
+
+.filter__radio {
+  position: absolute;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.filter__radio::-ms-check {
+  display: none;
+}
+
+.filter__radio-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+
+  width: 22px;
+  height: 22px;
+  content: "";
+
+  background-image: url("../img/radio-off.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  opacity: 0.8;
+}
+
+.filter__radio:checked + .filter__radio-img {
+  background-image: url("../img/radio-on.svg");
+}
+
+.filter__radio:focus + .filter__radio-img,
+.filter__radio:hover + .filter__radio-img {
+  opacity: 1;
+}
+
+.filter__radio:disabled + .filter__radio-img {
+  opacity: 0.4;
 }
 
 .filter__filler {
@@ -626,8 +721,73 @@ body {
 }
 
 .filter__wrapper--filler {
-  width: 703px;
+  min-width: 703px;
   height: 37px;
+  padding-left: 13px;
+}
+
+.filter__filler label {
+  position: relative;
+
+  padding-left: 32px;
+  padding-right: 25px;
+}
+
+.filter__filler label::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+
+  width: 24px;
+  height: 20px;
+  content: "";
+
+  background-image: url("../img/checkbox-on.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  opacity: 0;
+} 
+
+.filter__checkbox {
+  position: absolute;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.filter__checkbox::-ms-check {
+  display: none;
+}
+
+.filter__checkbox-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+
+  width: 24px;
+  height: 20px;
+
+  background-image: url("../img/checkbox-off.svg");
+  background-repeat: no-repeat;
+  background-size: 20px 20px;
+  opacity: 0.8;
+}
+
+.filter__checkbox:checked + .filter__checkbox-img {
+
+  background-image: url("../img/checkbox-on.svg");
+  background-size: 24px 20px;
+}
+
+.filter__checkbox:focus + .filter__checkbox-img,
+.filter__checkbox:hover + .filter__checkbox-img {
+  opacity: 1;
+}
+
+.filter__checkbox:disabled + .filter__checkbox-img {
+  opacity: 0.4;
 }
 
 .filter__button {
@@ -783,7 +943,7 @@ body {
 .catalog__hover-aria:hover {
   z-index: 1;
 
-  height: 405px;
+  min-height: 405px;
 
   border-radius: 5px;
   box-shadow: 0 20px 20px rgba(0, 0, 0, 0.4);

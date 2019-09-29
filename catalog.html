@@ -17,8 +17,8 @@
         <a class="header-nav__link--logo" href="index.html"><img src="img/gllacy.svg" width="154" height="64"
             alt="Gllacy Shop"></a>
         <ul class="header-nav__menu">
-          <li class="header-nav__item header-nav__item--current header-nav__item--submenu"><a class="header-nav__link header-nav__link--current"
-              href="catalog.html">Каталог</a>
+          <li class="header-nav__item header-nav__item--current header-nav__item--submenu"><a
+              class="header-nav__link header-nav__link--current" href="catalog.html">Каталог</a>
             <ul class="header-nav__submenu nav-submenu">
               <li class="nav-submenu__item"><a class="nav-submenu__link" href=""><b>Новинки</b></a></li>
               <li class="nav-submenu__item"><a class="nav-submenu__link" href="">Сливочное</a></li>
@@ -106,51 +106,64 @@
           <legend class="filter__name">Цена: 100 руб. – 500 руб.</legend>
           <div class="filter__wrapper filter__wrapper--range">
             <button class="filter-range__button filter-range__button--left" type="button">
-              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
-                <path fill="#ABABAB"
-                  d="M10 20C4.477 20 0 15.522 0 10v2c0 5.522 4.477 10 10 10 5.522 0 10-4.478 10-10v-2c0 5.522-4.478 10-10 10z"
-                  opacity=".3" />
-                <circle cx="10" cy="10" r="10" fill="#FFF" />
-                <circle cx="10" cy="10" r="2" fill="#ABABAB" />
-              </svg>
             </button>
             <button class="filter-range__button filter-range__button--right" type="button">
-              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
-                <path fill="#ABABAB"
-                  d="M10 20C4.477 20 0 15.522 0 10v2c0 5.522 4.477 10 10 10 5.522 0 10-4.478 10-10v-2c0 5.522-4.478 10-10 10z"
-                  opacity=".3" />
-                <circle cx="10" cy="10" r="10" fill="#FFF" />
-                <circle cx="10" cy="10" r="2" fill="#ABABAB" />
-              </svg>
             </button>
           </div>
         </fieldset>
         <fieldset class="filter__fat">
           <legend class="filter__name">Жирность:</legend>
           <div class="filter__wrapper filter__wrapper--fat">
-            <input type="radio" name="percents" id="fat-0">
-            <label for="fat-0">0%</label>
-            <input type="radio" name="percents" id="fat-10" checked>
-            <label for="fat-10">до 10%</label>
-            <input type="radio" name="percents" id="fat-less30">
-            <label for="fat-less30">до 30%</label>
-            <input type="radio" name="percents" id="fat-more30">
-            <label for="fat-more30">выше 30%</label>
+            <label for="fat-0">
+              <input class="filter__radio" type="radio" name="percents" id="fat-0">
+              <span class="filter__radio-img"></span>
+              0%
+            </label>
+            <label for="fat-10">
+              <input class="filter__radio" type="radio" name="percents" id="fat-10" checked>
+              <span class="filter__radio-img"></span>
+              до 10%
+            </label>
+            <label for="fat-less30">
+              <input class="filter__radio" type="radio" name="percents" id="fat-less30">
+              <span class="filter__radio-img"></span>
+              до 30%
+            </label>
+            <label for="fat-more30">
+              <input class="filter__radio" type="radio" name="percents" id="fat-more30">
+              <span class="filter__radio-img"></span>
+              выше 30%
+            </label>
           </div>
         </fieldset>
         <fieldset class="filter__filler">
           <legend class="filter__name">Наполнители:</legend>
           <div class="filter__wrapper filter__wrapper--filler">
-            <input type="checkbox" name="chocolate" id="filler-chocolate" checked>
-            <label for="filler-chocolate">шоколадные</label>
-            <input type="checkbox" name="sugar" id="filler-sugar" checked>
-            <label for="filler-sugar">сахарные присыпки</label>
-            <input type="checkbox" name="fruit" id="filler-fruit">
-            <label for="filler-fruit">фрукты</label>
-            <input type="checkbox" name="syrup" id="filler-syrup">
-            <label for="filler-syrup">сиропы</label>
-            <input type="checkbox" name="jam" id="filler-jam">
-            <label for="filler-jam">джемы</label>
+            <label for="filler-chocolate">
+              <input class="filter__checkbox" type="checkbox" name="chocolate" id="filler-chocolate" checked>
+              <span class="filter__checkbox-img"></span>
+              шоколадные
+            </label>
+            <label for="filler-sugar">
+              <input class="filter__checkbox" type="checkbox" name="sugar" id="filler-sugar" checked>
+              <span class="filter__checkbox-img"></span>
+              сахарные присыпки
+            </label>
+            <label for="filler-fruit">
+              <input class="filter__checkbox" type="checkbox" name="fruit" id="filler-fruit">
+              <span class="filter__checkbox-img"></span>
+              фрукты
+            </label>
+            <label for="filler-syrup">
+              <input class="filter__checkbox" type="checkbox" name="syrup" id="filler-syrup">
+              <span class="filter__checkbox-img"></span>
+              сиропы
+            </label>
+            <label for="filler-jam">
+              <input class="filter__checkbox" type="checkbox" name="jam" id="filler-jam">
+              <span class="filter__checkbox-img"></span>
+              джемы
+            </label>
           </div>
         </fieldset>
         <button class="filter__button" type="submit">Применить</button>
@@ -376,54 +389,54 @@
     </section>
   </main>
   <footer class="main-footer container">
-      <ul class="main-footer__social-list social">
-        <li class="main-footer__social-item">
-          <a class="main-footer__social-link social--tw" href="" target="_blank">
-            <span class="visually-hidden">Твиттер</span>
-          </a>
+    <ul class="main-footer__social-list social">
+      <li class="main-footer__social-item">
+        <a class="main-footer__social-link social--tw" href="" target="_blank">
+          <span class="visually-hidden">Твиттер</span>
+        </a>
+      </li>
+      <li class="main-footer__social-item">
+        <a class="main-footer__social-link social--inst" href="" target="_blank">
+          <span class="visually-hidden">Инстаграм</span>
+        </a>
+      </li>
+      <li class="main-footer__social-item">
+        <a class="main-footer__social-link social--fb" href="" target="_blank">
+          <span class="visually-hidden">Фейсбук</span>
+        </a>
+      </li>
+      <li class="main-footer__social-item">
+        <a class="main-footer__social-link social--vk" href="" target="_blank">
+          <span class="visually-hidden">Вконтакте</span>
+        </a>
+      </li>
+    </ul>
+    <nav class="main-footer__nav">
+      <ul class="main-footer-nav__list">
+        <li class="main-footer-nav__item">
+          <a class="main-footer-nav__link main-footer-nav__link--bold" href="">Для поставщиков</a>
         </li>
-        <li class="main-footer__social-item">
-          <a class="main-footer__social-link social--inst" href="" target="_blank">
-            <span class="visually-hidden">Инстаграм</span>
-          </a>
+        <li class="main-footer-nav__item">
+          <a class="main-footer-nav__link" href="">О производстве</a>
         </li>
-        <li class="main-footer__social-item">
-          <a class="main-footer__social-link social--fb" href="" target="_blank">
-            <span class="visually-hidden">Фейсбук</span>
-          </a>
+        <li class="main-footer-nav__item">
+          <a class="main-footer-nav__link" href="">Наши документы</a>
         </li>
-        <li class="main-footer__social-item">
-          <a class="main-footer__social-link social--vk" href="" target="_blank">
-            <span class="visually-hidden">Вконтакте</span>
-          </a>
+        <li class="main-footer-nav__item">
+          <a class="main-footer-nav__link" href="">Экологические стандарты</a>
         </li>
       </ul>
-      <nav class="main-footer__nav">
-        <ul class="main-footer-nav__list">
-          <li class="main-footer-nav__item">
-            <a class="main-footer-nav__link main-footer-nav__link--bold" href="">Для поставщиков</a>
-          </li>
-          <li class="main-footer-nav__item">
-            <a class="main-footer-nav__link" href="">О производстве</a>
-          </li>
-          <li class="main-footer-nav__item">
-            <a class="main-footer-nav__link" href="">Наши документы</a>
-          </li>
-          <li class="main-footer-nav__item">
-            <a class="main-footer-nav__link" href="">Экологические стандарты</a>
-          </li>
-        </ul>
-      </nav>
-      <p class="main-footer__copy-right main-footer-copy-right">
-        <a class="main-footer-copy-right__link--img" href="https://htmlacademy.ru/intensive/htmlcss"><img
-            src="img/logo-htmlacademy-small.svg" width="108" height="39" alt="html academy"></a>
-        <span>
-          Сделано в <a class="main-footer-copy-right__link" href="https://htmlacademy.ru/intensive/htmlcss">HTML
-            Academy</a>
-          © 2019
-        </span>
-      </p>
-    </footer>
+    </nav>
+    <p class="main-footer__copy-right main-footer-copy-right">
+      <a class="main-footer-copy-right__link--img" href="https://htmlacademy.ru/intensive/htmlcss"><img
+          src="img/logo-htmlacademy-small.svg" width="108" height="39" alt="html academy"></a>
+      <span>
+        Сделано в <a class="main-footer-copy-right__link" href="https://htmlacademy.ru/intensive/htmlcss">HTML
+          Academy</a>
+        © 2019
+      </span>
+    </p>
+  </footer>
   <div class="temporarily-hidden">
     <h2 class="visually-hidden">Поиск</h2>
     <form action="https://echo.htmlacademy.ru" method="post">

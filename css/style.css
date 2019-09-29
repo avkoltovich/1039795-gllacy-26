@@ -722,8 +722,6 @@ body {
   fill: #323232;
 }
 
-
-
 .header__schedule {
   align-self: flex-end;
   margin-top: -8px;
@@ -1059,7 +1057,7 @@ body {
 
 .filter__checkbox:focus + .filter__checkbox-img,
 .filter__checkbox:hover + .filter__checkbox-img {
-  opacity: 1;
+  opacity: 0.6;
 }
 
 .filter__checkbox:disabled + .filter__checkbox-img {

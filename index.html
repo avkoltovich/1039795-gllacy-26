@@ -37,16 +37,24 @@
           </ul>
         </div>
         <div class="header-nav__wrapper header-nav__wrapper--user">
-          <button class="header-nav__button header-nav__button--search" type="button">
-            <svg class="header-nav__svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-              width="17" height="17" viewBox="0 0 17 17">
-              <g>
-                <path
-                  d="M16.958 15.527L11.75 10.32A6.455 6.455 0 0 0 13 6.5 6.5 6.5 0 1 0 6.5 13a6.465 6.465 0 0 0 3.839-1.263l5.205 5.204 1.414-1.414zM6.5 11C4.019 11 2 8.981 2 6.5S4.019 2 6.5 2 11 4.019 11 6.5 8.981 11 6.5 11z" />
-              </g>
-            </svg>
-            <span class="visually-hidden">Поиск</span>
-          </button>
+          <div class="header-nav__search">
+            <button class="header-nav__button header-nav__button--search" type="button">
+              <svg class="header-nav__svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                width="17" height="17" viewBox="0 0 17 17">
+                <g>
+                  <path
+                    d="M16.958 15.527L11.75 10.32A6.455 6.455 0 0 0 13 6.5 6.5 6.5 0 1 0 6.5 13a6.465 6.465 0 0 0 3.839-1.263l5.205 5.204 1.414-1.414zM6.5 11C4.019 11 2 8.981 2 6.5S4.019 2 6.5 2 11 4.019 11 6.5 8.981 11 6.5 11z" />
+                </g>
+              </svg>
+              <span class="visually-hidden">Поиск</span>
+            </button>
+            <div class="header-nav__search-block">
+              <form action="https://echo.htmlacademy.ru" method="post">
+                <label class="visually-hidden" for="user-search">Форма поиска</label>
+                <input type="search" name="search" id="user-search" placeholder="Что ищем?">
+              </form>
+            </div>
+          </div>
           <a class="header-nav__button" href="">
             <span>
               <svg class="header-nav__svg header-nav__svg--oval" xmlns="http://www.w3.org/2000/svg"
@@ -348,13 +356,7 @@
         </span>
       </p>
     </footer>
-    <div class="temporarily-hidden">
-      <h2 class="visually-hidden">Поиск</h2>
-      <form action="https://echo.htmlacademy.ru" method="post">
-        <label class="visually-hidden" for="user-search">Форма поиска</label>
-        <input type="search" name="search" id="user-search" placeholder="Что ищем?">
-      </form>
-    </div>
+    
     <div class="temporarily-hidden">
       <h2 class="visually-hidden">Вход</h2>
       <form action="https://echo.htmlacademy.ru" method="post">

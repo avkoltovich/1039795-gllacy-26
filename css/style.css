@@ -370,6 +370,8 @@ body {
 }
 
 .header-nav__wrapper--user {
+  position: relative;
+
   margin-top: 0px;
 }
 
@@ -405,6 +407,10 @@ body {
   margin-top: 2px;
 }
 
+.header-nav__search {
+  position: relative;
+}
+
 .header-nav__button--search {
   margin-top: 0;
   width: 33px;
@@ -412,6 +418,58 @@ body {
   padding: 8px;
 
   border-radius: 50%;
+}
+
+.header-nav__search-block {
+  position: absolute;
+  top: 40px;
+  right: 0;
+
+  display: none;
+  width: 341px;
+  height: 84px;
+  padding-top: 20px;
+  padding-left: 15px;
+
+  box-shadow: 0px 20px 20px 0 rgba(0, 0, 0, 0.4);
+  background-color: #f8f7f4;
+  border-radius: 5px;
+}
+
+.header-nav__search input {
+  width: 311px;
+  height: 44px;
+  padding-left: 15px;
+  padding-right: 15px;
+
+  font-family: Roboto;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 1.71;
+  color: #999999;
+
+  border: solid 1px #d3d3d2;
+  background-color: #ffffff;
+}
+
+.header-nav__button--search:hover .header-nav__svg,
+.header-nav__button--search:focus .header-nav__svg {
+  fill: #323232;
+}
+
+.header-nav__button--search:hover,
+.header-nav__button--search:focus {
+  background-color: #fff;
+}
+
+/* костыль. переделать на JS */
+.header-nav__button--search:focus + .header-nav__search-block {
+  display: block;
+}
+
+/* костыль. переделать на JS */
+.header-nav__search-block:hover {
+  display: block;
 }
 
 .header-nav__button--full-cart {
@@ -436,15 +494,13 @@ body {
   fill: #323232;
 }
 
-.header-nav__button:hover,
-.header-nav__button--search:hover {
+.header-nav__button:hover {
   color: #323232;
 
   background-color: #fff;
 }
 
-.header-nav__button:hover .header-nav__svg,
-.header-nav__button--search:hover .header-nav__svg {
+.header-nav__button:hover .header-nav__svg {
   fill: #323232;
 }
 

@@ -941,7 +941,7 @@ body {
   position: relative;
 
   display: block;
-  
+
   padding-right: 14px;
   padding-left: 33px;
 }
@@ -960,7 +960,7 @@ body {
   background-repeat: no-repeat;
   background-size: contain;
   opacity: 0;
-} 
+}
 
 .filter__radio {
   position: absolute;
@@ -1038,7 +1038,7 @@ body {
   background-repeat: no-repeat;
   background-size: contain;
   opacity: 0;
-} 
+}
 
 .filter__checkbox {
   position: absolute;
@@ -1121,6 +1121,61 @@ body {
   margin: 0 auto;
   margin-bottom: 6px;
 }
+
+/*Sergey*/
+.catalog__wrapper {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.catalog__link-item {
+  position: relative;
+  width: 293px;
+  min-height: 405px;
+  padding: 6px 13px 0 13px;
+  margin-bottom: -30px;
+}
+
+.catalog__hidden-item {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: inherit;
+  min-height: 405px;
+  z-index: 1;
+  display: none;
+  border-radius: 5px;
+  box-shadow: 0 20px 20px rgba(0, 0, 0, 0.2);
+  background-color: rgba(248, 247, 244, 0.2);
+}
+
+.catalog__item-button {
+  position: absolute;
+  bottom: 20px;
+  left: 46px;
+  /*z-index: -1;*/
+
+  padding: 10px 17px;
+
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 24px;
+  color: #fefefe;
+  /*opacity: 0;*/
+
+  border: none;
+  border-radius: 30px;
+  box-shadow: 0px 1px 2px 0 #ac1000;
+  background-image: linear-gradient(to top, #e74a35, #f26843);
+}
+
+.catalog__link-item:hover .catalog__hidden-item,
+.catalog__link-item:focus .catalog__hidden-item {
+  display: block;
+}
+
+/*Sergey*/
 
 .catalog__list {
   display: flex;
@@ -1213,7 +1268,7 @@ body {
   width: 100%;
   height: calc(100% + 80px);
   padding-bottom: 20px;
-  
+
   border-radius: 5px;
   box-shadow: 0 20px 20px rgba(0, 0, 0, 0.2);
   background-color: rgba(248, 247, 244, 0.2);
@@ -1226,7 +1281,7 @@ body {
   z-index: -1;
 
   padding: 10px 17px;
-  
+
   font-size: 18px;
   font-weight: 700;
   line-height: 24px;
@@ -1268,9 +1323,10 @@ body {
 }
 
 .catalog__link:focus .catalog__image,
-.catalog__link:focus .catalog__heading,
+/*.catalog__link:focus .catalog__heading,*/
 .catalog__item:hover .catalog__image,
-.catalog__item:hover .catalog__heading {
+/*.catalog__item:hover .catalog__heading*/
+ {
   z-index: 2;
 }
 
@@ -1808,7 +1864,7 @@ body {
 
   display: none;
   width: 478px;
-  
+
   border-radius: 10px;
   background-color: #f8f7f4;
 }

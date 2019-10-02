@@ -176,6 +176,12 @@ body {
   background-color: #fff;
 }
 
+#product-1:focus~.site-wrapper label[for="product-1"],
+#product-2:focus~.site-wrapper label[for="product-2"],
+#product-3:focus~.site-wrapper label[for="product-3"] {
+  outline: 2px dotted #fff;
+}
+
 .header {
   display: flex;
   flex-direction: column;
@@ -874,8 +880,8 @@ body {
   position: relative;
   justify-content: center;
 
-  width: 220px;
-  height: 37px;
+  min-width: 220px;
+  min-height: 37px;
 }
 
 .filter__wrapper--range::before {
@@ -927,8 +933,8 @@ body {
 
 .filter__wrapper--fat {
   min-width: 415px;
-  height: 37px;
-  padding-left: 10px;
+  min-height: 37px;
+  padding-left: 14px;
 }
 
 .filter__fat label {
@@ -936,7 +942,7 @@ body {
 
   display: block;
   
-  padding-right: 15px;
+  padding-right: 14px;
   padding-left: 33px;
 }
 
@@ -946,8 +952,8 @@ body {
   left: 0;
   z-index: 2;
 
-  width: 22px;
-  height: 22px;
+  width: 23px;
+  height: 23px;
   content: "";
 
   background-image: url("../img/radio-on.svg");
@@ -973,21 +979,26 @@ body {
   left: 0;
   z-index: 1;
 
-  width: 22px;
-  height: 22px;
+  width: 23px;
+  height: 23px;
   content: "";
 
   background-image: url("../img/radio-off.svg");
   background-repeat: no-repeat;
   background-size: contain;
   opacity: 0.8;
+
 }
 
 .filter__radio:checked + .filter__radio-img {
   background-image: url("../img/radio-on.svg");
 }
 
-.filter__radio:focus + .filter__radio-img,
+.filter__radio:focus + .filter__radio-img {
+  outline: 2px dotted #fff;
+  opacity: 1;
+}
+
 .filter__radio:hover + .filter__radio-img {
   opacity: 1;
 }
@@ -1002,7 +1013,7 @@ body {
 
 .filter__wrapper--filler {
   min-width: 703px;
-  height: 37px;
+  min-height: 37px;
   padding-left: 13px;
 }
 
@@ -1061,9 +1072,13 @@ body {
   background-size: 24px 20px;
 }
 
-.filter__checkbox:focus + .filter__checkbox-img,
 .filter__checkbox:hover + .filter__checkbox-img {
-  opacity: 0.6;
+  opacity: 1;
+}
+
+.filter__checkbox:focus + .filter__checkbox-img {
+  outline: 2px dotted #fff;
+  opacity: 1;
 }
 
 .filter__checkbox:disabled + .filter__checkbox-img {
@@ -1072,9 +1087,10 @@ body {
 
 .filter__button {
   align-self: flex-end;
-  width: 144px;
-  height: 37px;
-  padding: 0;
+  padding-top: 6px;
+  padding-right: 30px;
+  padding-bottom: 6px;
+  padding-left: 30px;
 
   font-size: 16px;
   font-weight: 500;
@@ -1152,7 +1168,6 @@ body {
 }
 
 .catalog__heading {
-
   align-self: center;
   order: 1;
   margin: 0;
@@ -1195,25 +1210,28 @@ body {
   z-index: 1;
 
   display: none;
-  flex-direction: column;
-  justify-content: flex-end;
-  align-items: center;
   width: 100%;
   height: calc(100% + 80px);
   padding-bottom: 20px;
   
   border-radius: 5px;
-  box-shadow: 0 20px 20px rgba(0, 0, 0, 0.4);
-  background-color: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 20px 20px rgba(0, 0, 0, 0.2);
+  background-color: rgba(248, 247, 244, 0.2);
 }
 
 .catalog__button {
-  padding: 10px 17px;
+  position: absolute;
+  bottom: -60px;
+  left: 46px;
+  z-index: -1;
 
+  padding: 10px 17px;
+  
   font-size: 18px;
   font-weight: 700;
   line-height: 24px;
   color: #fefefe;
+  opacity: 0;
 
   border: none;
   border-radius: 30px;
@@ -1235,10 +1253,22 @@ body {
     linear-gradient(to bottom, #e74a35, #f26843);
 }
 
+.catalog__button:focus + .catalog__hover-aria,
+.catalog__link:focus ~ .catalog__hover-aria,
 .catalog__item:hover .catalog__hover-aria {
-  display: flex;
+  display: block;
 }
 
+.catalog__item:hover .catalog__button,
+.catalog__link:focus + .catalog__button,
+.catalog__button:focus {
+  z-index: 3;
+
+  opacity: 1;
+}
+
+.catalog__link:focus .catalog__image,
+.catalog__link:focus .catalog__heading,
 .catalog__item:hover .catalog__image,
 .catalog__item:hover .catalog__heading {
   z-index: 2;
@@ -1349,6 +1379,7 @@ body {
 
 .promotions {
   display: flex;
+  justify-content: space-between;
   margin-bottom: 34px;
 }
 
@@ -1393,8 +1424,6 @@ body {
 }
 
 .promotions__chocolate {
-  margin-left: auto;
-
   background-color: #724629;
   background-image: url("../img/chocolate.jpg");
 }

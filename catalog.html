@@ -160,13 +160,11 @@
       <ul class="breadcrumbs">
         <li class="breadcrumbs__item">
           <a class="breadcrumbs__link" href="index.html">Главная</a>
-          <span class="breadcrumbs__separator">»</span>
         </li>
         <li class="breadcrumbs__item">
           <a class="breadcrumbs__link" href="catalog.html">Каталог</a>
-          <span class="breadcrumbs__separator">»</span>
         </li>
-        <li class="breadcrumbs__item breadcrumbs__item--current">Сливочное</li>
+        <li class="breadcrumbs__item"><a aria-current="page">Сливочное</a></li>
       </ul>
       <h1 class="main-heading">Сливочное мороженое</h1>
     </div>
@@ -421,7 +419,7 @@
       </ul>
       <ul class="catalog-pagination container">
         <li class="catalog-pagination__item">
-          <a class="catalog-pagination__link catalog-pagination__link--disabled">
+          <a class="catalog-pagination__link" aria-disabled="true">
             <svg class="catalog-pagination__svg-left catalog-pagination__svg--disabled"
               xmlns="http://www.w3.org/2000/svg" width="8" height="12" viewBox="0 0 8 12">
               <path
@@ -430,7 +428,7 @@
           </a>
         </li>
         <li class="catalog-pagination__item">
-          <a class="catalog-pagination__link catalog-pagination__link--current">1</a>
+          <a class="catalog-pagination__link" aria-current="page">1</a>
         </li>
         <li class="catalog-pagination__item">
           <a class="catalog-pagination__link" href="#">2</a>

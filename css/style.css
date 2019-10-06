@@ -400,7 +400,6 @@ body {
   background-color: rgba(255, 255, 255, 0.2);
   border: none;
   border-radius: 20px;
-  cursor: pointer;
 }
 
 .header-nav__button-text {
@@ -433,6 +432,7 @@ body {
   position: absolute;
   top: 42px;
   right: 0;
+  z-index: 10;
 
   display: none;
   width: 341px;
@@ -460,24 +460,28 @@ body {
   background-color: #ffffff;
 }
 
-.header-nav__button--search:hover .header-nav__svg,
-.header-nav__button--search:focus .header-nav__svg {
+.header-nav__search:hover .header-nav__svg {
   fill: #323232;
 }
 
-.header-nav__button--search:hover,
-.header-nav__button--search:focus {
+.header-nav__search:hover .header-nav__button--search {
   background-color: #fff;
 }
 
-/* костыль. переделать на JS */
-.header-nav__button--search:focus + .header-nav__search-block {
+.header-nav__button--search:focus + .header-nav__search-block,
+.header-nav__search:hover .header-nav__search-block {
   display: block;
 }
 
-/* костыль. переделать на JS */
-.header-nav__search-block:hover {
-  display: block;
+.header-nav__search:hover::after {
+  position: absolute;
+  top: 15px;
+  right: -10px;
+  z-index: 0;
+
+  width: 365px;
+  height: 125px;
+  content: "";
 }
 
 .header-nav__login {
@@ -694,6 +698,10 @@ body {
 
 /* костыль. переделать на JS */
 .header-nav__button--full-cart:focus + .header-nav__cart-block {
+  display: block;
+}
+
+.header-nav__button--full-cart:hover + .header-nav__cart-block {
   display: block;
 }
 

@@ -456,19 +456,39 @@ body {
   content: "";
 }
 
-.header-nav__search input {
+.header-nav__search-input {
   width: 311px;
   height: 44px;
   padding-left: 15px;
   padding-right: 15px;
 
   font-size: 14px;
-  font-weight: normal;
+  font-weight: bold;
   line-height: 1.71;
-  color: #999999;
+  color: #323232;
 
   border: solid 1px #d3d3d2;
+  border-radius: 5px;
   background-color: #ffffff;
+}
+
+.header-nav__search-input::placeholder {
+  font-weight: normal;
+  color: #999;
+}
+
+.header-nav__search-input:hover {
+  padding-left: 14px;
+  padding-right: 14px;
+
+  border: solid 2px rgba(154, 154, 154, 0.52);
+}
+
+.header-nav__search-input:focus {
+  padding-left: 14px;
+  padding-right: 14px;
+
+  border: solid 2px rgba(46, 136, 228, 0.52);
 }
 
 .header-nav__search:hover .header-nav__svg {
@@ -505,6 +525,14 @@ body {
   border-radius: 5px;
 }
 
+.header-nav__login-block--single {
+  position: relative;
+  top: 0;
+
+  display: block;
+  margin: 25px;
+}
+
 .header-nav__login:hover::after {
   position: absolute;
   top: 35px;
@@ -516,7 +544,8 @@ body {
   content: "";
 }
 
-.header-nav__login input {
+.login-block__login,
+.login-block__pass {
   width: 241px;
   height: 44px;
   padding-left: 15px;
@@ -524,13 +553,35 @@ body {
   margin-bottom: 20px;
 
   font-size: 14px;
-  font-weight: normal;
+  font-weight: bold;
   line-height: 1.71;
-  color: #999999;
+  color: #323232;
 
   border-radius: 5px;
-  border: solid 1px #d3d3d2;
+  border: solid 1px rgba(178, 178, 178, 0.52);
   background-color: #ffffff;
+}
+
+.login-block__login::placeholder,
+.login-block__pass::placeholder {
+  font-weight: normal;
+  color: #999;
+}
+
+.login-block__login:hover,
+.login-block__pass:hover {
+  padding-left: 14px;
+  padding-right: 14px;
+
+  border: solid 2px rgba(154, 154, 154, 0.52);
+}
+
+.login-block__login:focus,
+.login-block__pass:focus {
+  padding-left: 14px;
+  padding-right: 14px;
+
+  border: solid 2px rgba(46, 136, 228, 0.52);
 }
 
 .header-nav__login:hover .header-nav__button,
@@ -1700,7 +1751,7 @@ body {
   margin-bottom: 34px;
 }
 
-.subscription__form input[type="email"] {
+.subscription__input {
   box-sizing: border-box;
   width: 368px;
   height: 44px;
@@ -1709,12 +1760,32 @@ body {
   padding-right: 14px;
 
   font-size: 16px;
-  font-weight: 400;
+  font-weight: bold;
   line-height: 24px;
+  color: #323232;
 
   border-radius: 5px;
   border: solid 1px rgba(178, 178, 178, 0.52);
   background-color: #ffffff;
+}
+
+.subscription__input::placeholder {
+  font-weight: normal;
+  color: #999;
+}
+
+.subscription__input:hover {
+  padding-left: 13px;
+  padding-right: 13px;
+
+  border: solid 2px rgba(154, 154, 154, 0.52);
+}
+
+.subscription__input:focus {
+  padding-left: 13px;
+  padding-right: 13px;
+
+  border: solid 2px rgba(46, 136, 228, 0.52);
 }
 
 .subscription__button {
@@ -1732,14 +1803,14 @@ body {
   background-image: linear-gradient(to top, #ca3824, #f26843);
 }
 
-.subscription__form button:hover {
+.subscription__button:hover {
   box-shadow: 0px 1px 2px 0 #ac1000;
   background-image:
     linear-gradient(to bottom, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)),
     linear-gradient(to top, #e74a35, #f26843);
 }
 
-.subscription__form button:active {
+.subscription__button:active {
   box-shadow: inset 0px 2px 2px 0 #942718;
   background-image:
     linear-gradient(to bottom, rgba(0, 0, 0, 0.07), rgba(0, 0, 0, 0.07)),
@@ -1942,23 +2013,24 @@ body {
   cursor: pointer;
 }
 
-.feedback__form input {
+.feedback__name,
+.feedback__email {
   width: 267px;
   height: 44px;
   padding-right: 15px;
   padding-left: 15px;
 
   font-size: 16px;
-  font-weight: normal;
+  font-weight: bold;
   line-height: 1.5;
-  color: #999;
+  color: #323232;
 
   border: solid 1px rgba(178, 178, 178, 0.52);
   border-radius: 5px;
   background-color: #fff;
 }
 
-.feedback__form textarea {
+.feedback__text {
   width: 428px;
   height: 155px;
   padding-top: 13px;
@@ -1966,23 +2038,46 @@ body {
   padding-left: 15px;
 
   font-size: 16px;
-  font-weight: normal;
+  font-weight: bold;
   line-height: 1.5;
-  color: #999999;
+  color: #323232;
 
   border: solid 1px rgba(178, 178, 178, 0.52);
   border-radius: 5px;
   background-color: #fff;
 }
 
-/* костыль. переделать на JS */
-.contacts__button--feed:focus+.contacts__feedback {
-  display: block;
+.feedback__name::placeholder,
+.feedback__email::placeholder,
+.feedback__text::placeholder {
+  font-weight: normal;
+  color: #999;
 }
 
-/* костыль. переделать на JS */
-.contacts__feedback:hover {
-  display: block;
+.feedback__name:hover,
+.feedback__email:hover,
+.feedback__text:hover {
+  padding-left: 14px;
+  padding-right: 14px;
+
+  border: solid 2px rgba(154, 154, 154, 0.52);
+}
+
+.feedback__text:hover {
+  padding-top: 12px;
+}
+
+.feedback__name:focus,
+.feedback__email:focus,
+.feedback__text:focus {
+  padding-left: 14px;
+  padding-right: 14px;
+
+  border: solid 2px rgba(46, 136, 228, 0.52);
+}
+
+.feedback__text:focus {
+  padding-top: 12px;
 }
 
 .main-footer {

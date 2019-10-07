@@ -22,8 +22,7 @@
           <a class="header-nav__link--logo"><img src="img/gllacy.svg" width="154" height="64" alt="Gllacy Shop"></a>
           <ul class="header-nav__menu">
             <li class="header-nav__item header-nav__item--submenu">
-              <a class="header-nav__link header-nav__link--submenu"
-                href="">Каталог</a>
+              <a class="header-nav__link header-nav__link--submenu" href="catalog.html">Каталог</a>
               <ul class="header-nav__submenu nav-submenu">
                 <li class="nav-submenu__item"><a class="nav-submenu__link nav-submenu__link--bold" href="">Новинки</a>
                 </li>
@@ -52,12 +51,12 @@
             <div class="header-nav__search-block">
               <form action="https://echo.htmlacademy.ru" method="post">
                 <label class="visually-hidden" for="user-search">Форма поиска</label>
-                <input type="search" name="search" id="user-search" placeholder="Что ищем?">
+                <input class="header-nav__search-input" type="search" name="search" id="user-search" placeholder="Что ищем?">
               </form>
             </div>
           </div>
           <div class="header-nav__login">
-            <button class="header-nav__button header-nav__button--login" type="button">
+            <a class="header-nav__button header-nav__button--login" href="login.html">
               <span>
                 <svg class="header-nav__svg header-nav__svg--oval" xmlns="http://www.w3.org/2000/svg"
                   xmlns:xlink="http://www.w3.org/1999/xlink" width="21" height="19" viewBox="0 0 21 19">
@@ -69,25 +68,27 @@
                 </svg>
               </span>
               <span class="header-nav__button-text">Вход</span>
-            </button>
+            </a>
             <div class="header-nav__login-block login-block">
-              <form action="https://echo.htmlacademy.ru" method="post">
+              <form action="https://echo.htmlacademy.ru" method="get">
                 <label for="user-login">
                   <span class="visually-hidden">Логин</span>
-                  <input type="email" name="login" id="user-login" placeholder="Электронная почта">
+                  <input class="login-block__login" type="email" name="login" id="user-login"
+                    placeholder="Электронная почта">
                 </label>
                 <label for="user-password">
                   <span class="visually-hidden">Пароль</span>
-                  <input type="password" name="password" id="user-password" placeholder="Пароль">
+                  <input class="login-block__pass" type="password" name="password" id="user-password"
+                    placeholder="Пароль">
                 </label>
-              </form>
-              <div class="login-block__buttons">
-                <button class="login-block__btn" type="submit">Войти</button>
-                <div>
-                  <a class="login-block__link" href="#">Забыли пароль?</a>
-                  <a class="login-block__link" href="#">Новая регистрация</a>
+                <div class="login-block__buttons">
+                  <button class="login-block__btn" type="submit">Войти</button>
+                  <div>
+                    <a class="login-block__link" href="#">Забыли пароль?</a>
+                    <a class="login-block__link" href="#">Новая регистрация</a>
+                  </div>
                 </div>
-              </div>
+              </form>
             </div>
           </div>
           <a class="header-nav__button" href="">
@@ -126,7 +127,7 @@
             <h3 class="slide__title">
               Крем-брюле и пломбир с малиновым джемом
             </h3>
-            <a class="slide__button" href="#">Давайте оба!</a>
+            <a class="slide__button" href="">Давайте оба!</a>
           </li>
           <li class="slider__item slide--disabled" id="slide2">
             <img class="visually-hidden" src="img/slide-2.png" width="1065" height="859"
@@ -142,7 +143,7 @@
             <h3 class="slide__title">
               Пломбир с помадкой и клубничный щербет
             </h3>
-            <a class="slide__button" href="#">Давайте оба!</a>
+            <a class="slide__button" href="">Давайте оба!</a>
           </li>
         </ul>
       </section>
@@ -306,7 +307,7 @@
             </p>
             <form class="subscription__form" action="https://echo.htmlacademy.ru" method="get">
               <label class="visually-hidden" for="user-email">Электронная почта</label>
-              <input type="email" name="email" id="user-email" placeholder="email@example.com">
+              <input class="subscription__input" type="email" name="email" id="user-email" placeholder="email@example.com">
               <button class="subscription__button" type="submit">Отправить</button>
             </form>
           </div>
@@ -389,7 +390,6 @@
       </p>
     </footer>
   </div>
-
   <div class="modal-wrapper">
     <section class="contacts__feedback feedback">
       <div class="feedback__wrapper">
@@ -404,11 +404,13 @@
           </p>
           <p>
             <label class="visually-hidden" for="feedback-email">Электронная почта</label>
-            <input class="feedback__email" type="email" name="email" id="feedback-email" placeholder="Ваша почта для ответа?">
+            <input class="feedback__email" type="email" name="email" id="feedback-email"
+              placeholder="Ваша почта для ответа?">
           </p>
           <p>
             <label class="visually-hidden" for="feedback-message">Сообщение</label>
-            <textarea class="feedback__text" name="message" id="feedback-message" placeholder="Напишите что-нибудь..."></textarea>
+            <textarea class="feedback__text" name="message" id="feedback-message"
+              placeholder="Напишите что-нибудь..."></textarea>
           </p>
           <button class="contacts__button contacts__button--send" type="submit">Отправить</button>
         </form>

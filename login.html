@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <title>HTML Academy: Глейси — Авторизация</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap&subset=cyrillic" rel="stylesheet">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+  <main>
+    <h1 class="visually-hidden">Авторизация</h1>
+    <section class="header-nav__login-block login-block header-nav__login-block--single">
+      <h2 class="visually-hidden">Вход</h2>
+      <form action="https://echo.htmlacademy.ru" method="get">
+        <label for="user-login">
+          <span class="visually-hidden">Логин</span>
+          <input class="login-block__login" type="email" name="login" id="user-login" placeholder="Электронная почта">
+        </label>
+        <label for="user-password">
+          <span class="visually-hidden">Пароль</span>
+          <input class="login-block__pass" type="password" name="password" id="user-password" placeholder="Пароль">
+        </label>
+        <div class="login-block__buttons">
+          <button class="login-block__btn" type="submit">Войти</button>
+          <div>
+            <a class="login-block__link" href="#">Забыли пароль?</a>
+            <a class="login-block__link" href="#">Новая регистрация</a>
+          </div>
+        </div>
+      </form>
+    </section>
+  </main>
+</body>
+
+</html>

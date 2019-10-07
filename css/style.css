@@ -522,6 +522,34 @@ body {
   background-color: #ffffff;
 }
 
+.header-nav__login:hover .header-nav__button,
+.header-nav__button:focus {
+  color: #323232;
+
+  background-color: #fff;
+}
+
+.header-nav__login:hover .header-nav__svg,
+.header-nav__button:focus .header-nav__svg {
+  fill: #323232;
+}
+
+.header-nav__login:hover .header-nav__login-block,
+.header-nav__button--login:focus + .header-nav__login-block {
+  display: block;
+}
+
+.header-nav__login:hover::after {
+  position: absolute;
+  top: 30px;
+  right: -15px;
+  z-index: 0;
+
+  width: 310px;
+  height: 240px;
+  content: "";
+}
+
 .login-block__buttons {
   display: flex;
 }
@@ -574,16 +602,6 @@ body {
   color: #e84d37;
 
   border-bottom: 1px solid rgba(232, 77, 55, 0.3);
-}
-
-/* костыль. переделать на JS */
-.header-nav__button--login:focus + .header-nav__login-block {
-  display: block;
-}
-
-/* костыль. переделать на JS */
-.header-nav__login-block:hover {
-  display: block;
 }
 
 .header-nav__cart {

@@ -18,7 +18,7 @@
             alt="Gllacy Shop"></a>
         <ul class="header-nav__menu">
           <li class="header-nav__item header-nav__item--current header-nav__item--submenu"><a
-              class="header-nav__link header-nav__link--current" href="catalog.html">Каталог</a>
+              class="header-nav__link header-nav__link--current" href="">Каталог</a>
             <ul class="header-nav__submenu nav-submenu">
               <li class="nav-submenu__item"><a class="nav-submenu__link" href=""><b>Новинки</b></a></li>
               <li class="nav-submenu__item"><a class="nav-submenu__link" href="catalog.html">Сливочное</a></li>
@@ -162,7 +162,7 @@
           <a class="breadcrumbs__link" href="index.html">Главная</a>
         </li>
         <li class="breadcrumbs__item">
-          <a class="breadcrumbs__link" href="catalog.html">Каталог</a>
+          <a class="breadcrumbs__link" href="">Каталог</a>
         </li>
         <li class="breadcrumbs__item"><a aria-current="page">Сливочное</a></li>
       </ul>
@@ -170,14 +170,14 @@
     </div>
     <section class="filter container">
       <h2 class="visually-hidden">Фильтры</h2>
-      <form class="filter__form">
+      <form class="filter__form" method="get" action="https://echo.htmlacademy.ru">
         <fieldset class="filter__sorting">
           <legend class="filter__name">Сортировка:</legend>
           <select name="sorting" aria-label="Сортировка" id="catalog-sorting">
-            <option value="by_popularity">по популярности</option>
-            <option value="by_cheap">сначала недорогие</option>
-            <option value="by_expensive">сначала дорогие</option>
-            <option value="by_fat">по жирности</option>
+            <option value="popularity">по популярности</option>
+            <option value="cheap">сначала недорогие</option>
+            <option value="expensive">сначала дорогие</option>
+            <option value="fat">по жирности</option>
           </select>
         </fieldset>
         <fieldset class="filter__price">

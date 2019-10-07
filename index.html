@@ -23,7 +23,7 @@
           <ul class="header-nav__menu">
             <li class="header-nav__item header-nav__item--submenu">
               <a class="header-nav__link header-nav__link--submenu"
-                href="catalog.html">Каталог</a>
+                href="">Каталог</a>
               <ul class="header-nav__submenu nav-submenu">
                 <li class="nav-submenu__item"><a class="nav-submenu__link nav-submenu__link--bold" href="">Новинки</a>
                 </li>
@@ -304,7 +304,7 @@
               Обещаем
               не спамить и не слать всякой ненужной ерунды. Честно =)
             </p>
-            <form class="subscription__form" action="https://echo.htmlacademy.ru" method="post">
+            <form class="subscription__form" action="https://echo.htmlacademy.ru" method="get">
               <label class="visually-hidden" for="user-email">Электронная почта</label>
               <input type="email" name="email" id="user-email" placeholder="email@example.com">
               <button class="subscription__button" type="submit">Отправить</button>
@@ -333,29 +333,6 @@
               (с 10 до 20 ежедневно)
             </p>
             <button class="contacts__button contacts__button--feed" type="button">Форма обратной связи</button>
-            <div class="contacts__feedback feedback">
-              <div class="feedback-wrapper">
-                <h3 class="feedback__title">Мы обязательно вам ответим!</h3>
-                <button class="contacts__button--close" type="button">
-                  <img src="img/close.svg" width="18" height="17" alt="Закрыть">
-                </button>
-                <form class="feedback__form" action="https://echo.htmlacademy.ru" method="post">
-                  <p>
-                    <label class="visually-hidden" for="feedback-name">Имя</label>
-                    <input type="text" name="name" id="feedback-name" placeholder="Как Вас зовут?">
-                  </p>
-                  <p>
-                    <label class="visually-hidden" for="feedback-email">Электронная почта</label>
-                    <input type="email" name="email" id="feedback-email" placeholder="Ваша почта для ответа?">
-                  </p>
-                  <p>
-                    <label class="visually-hidden" for="feedback-message">Сообщение</label>
-                    <textarea name="message" id="feedback-message" placeholder="Напишите что-нибудь..."></textarea>
-                  </p>
-                  <button class="contacts__button contacts__button--send" type="submit">Отправить</button>
-                </form>
-              </div>
-            </div>
           </div>
         </div>
       </section>
@@ -412,6 +389,35 @@
       </p>
     </footer>
   </div>
+
+  <div class="modal-wrapper">
+    <section class="contacts__feedback feedback">
+      <div class="feedback__wrapper">
+        <h3 class="feedback__title">Мы обязательно вам ответим!</h3>
+        <button class="contacts__button--close" type="button">
+          <img src="img/close.svg" width="18" height="17" alt="Закрыть">
+        </button>
+        <form class="feedback__form" action="https://echo.htmlacademy.ru" method="post">
+          <p>
+            <label class="visually-hidden" for="feedback-name">Имя</label>
+            <input class="feedback__name" type="text" name="name" id="feedback-name" placeholder="Как Вас зовут?">
+          </p>
+          <p>
+            <label class="visually-hidden" for="feedback-email">Электронная почта</label>
+            <input class="feedback__email" type="email" name="email" id="feedback-email" placeholder="Ваша почта для ответа?">
+          </p>
+          <p>
+            <label class="visually-hidden" for="feedback-message">Сообщение</label>
+            <textarea class="feedback__text" name="message" id="feedback-message" placeholder="Напишите что-нибудь..."></textarea>
+          </p>
+          <button class="contacts__button contacts__button--send" type="submit">Отправить</button>
+        </form>
+      </div>
+    </section>
+  </div>
+
+  <script src="/js/modal.js"></script>
+
 </body>
 
 </html>

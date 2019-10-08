@@ -476,6 +476,11 @@ body {
   color: #999;
 }
 
+.header-nav__search-input:-ms-input-placeholder {
+  font-weight: normal;
+  color: #999;
+}
+
 .header-nav__search-input:hover {
   padding-left: 14px;
   padding-right: 14px;
@@ -562,6 +567,12 @@ body {
 
 .login-block__login::placeholder,
 .login-block__pass::placeholder {
+  font-weight: normal;
+  color: #999;
+}
+
+.login-block__login:-ms-input-placeholder,
+.login-block__pass:-ms-input-placeholder {
   font-weight: normal;
   color: #999;
 }
@@ -1747,6 +1758,11 @@ body {
   color: #999;
 }
 
+.subscription__input:-ms-input-placeholder {
+  font-weight: normal;
+  color: #999;
+}
+
 .subscription__input:hover {
   padding-left: 13px;
   padding-right: 13px;
@@ -1801,7 +1817,8 @@ body {
 
 .contacts_map-img {
   position: absolute;
-  z-index: 0;
+
+  width: 100%;
 }
 
 #map {
@@ -2034,6 +2051,13 @@ body {
 .feedback__name::placeholder,
 .feedback__email::placeholder,
 .feedback__text::placeholder {
+  font-weight: normal;
+  color: #999;
+}
+
+.feedback__name:-ms-input-placeholder,
+.feedback__email:-ms-input-placeholder,
+.feedback__text:-ms-input-placeholder {
   font-weight: normal;
   color: #999;
 }

@@ -228,7 +228,6 @@ body {
   background-color: #f7f6f3;
 }
 
-/* "передаем" padding ссылке, чтобы увеличить область действия */
 .header-nav__item:hover .header-nav__link {
   padding-top: 6px;
   padding-right: 13px;
@@ -499,7 +498,6 @@ body {
   background-color: #fff;
 }
 
-.header-nav__button--search:focus+.header-nav__search-block,
 .header-nav__search:hover .header-nav__search-block {
   display: block;
 }
@@ -596,8 +594,7 @@ body {
   fill: #323232;
 }
 
-.header-nav__login:hover .header-nav__login-block,
-.header-nav__button--login:focus+.header-nav__login-block {
+.header-nav__login:hover .header-nav__login-block {
   display: block;
 }
 
@@ -700,7 +697,6 @@ body {
 }
 
 .header-nav__cart:hover .header-nav__cart-block,
-.header-nav__button--full-cart:focus+.header-nav__cart-block,
 .header-nav__cart-block:hover {
   display: block;
 }
@@ -782,27 +778,15 @@ body {
     linear-gradient(to bottom, #e74a35, #f26843);
 }
 
-/* костыль. переделать на JS */
-.header-nav__button--full-cart:focus+.header-nav__cart-block {
-  display: block;
-}
-
-.header-nav__button--full-cart:hover+.header-nav__cart-block {
-  display: block;
-}
-
-/* прячем заливку корзины, когда она пустая */
 .header-nav__svg>.svg-cart--fill {
   display: none;
 }
 
-/* меняем цвет заливки, когда корзина полная */
 .header-nav__button--full-cart .header-nav__svg>.svg-cart--fill {
   display: block;
   fill: #E84D37;
 }
 
-/* меняем цвет линий корзины, когда она полная */
 .header-nav__button--full-cart .header-nav__svg>.svg-cart--contour {
   fill: #323232;
 }
@@ -911,8 +895,6 @@ body {
 
   margin-bottom: 6px;
 }
-
-/* Предзагрузка картинки */
 .filter__sorting::before {
   position: absolute;
 
@@ -1314,15 +1296,15 @@ body {
   position: absolute;
   bottom: -60px;
   left: 46px;
-  z-index: -1;
+  z-index: 3;
 
+  display: none;
   padding: 10px 17px;
 
   font-size: 18px;
   font-weight: 700;
   line-height: 24px;
   color: #fefefe;
-  opacity: 0;
 
   border: none;
   border-radius: 30px;
@@ -1345,22 +1327,14 @@ body {
     linear-gradient(to bottom, #e74a35, #f26843);
 }
 
-.catalog__button:focus+.catalog__hover-aria,
-.catalog__link:focus~.catalog__hover-aria,
 .catalog__item:hover .catalog__hover-aria {
   display: block;
 }
 
-.catalog__item:hover .catalog__button,
-.catalog__link:focus+.catalog__button,
-.catalog__button:focus {
-  z-index: 3;
-
-  opacity: 1;
+.catalog__item:hover .catalog__button {
+  display: block;
 }
 
-.catalog__link:focus .catalog__image,
-.catalog__link:focus .catalog__heading,
 .catalog__item:hover .catalog__image,
 .catalog__item:hover .catalog__heading {
   z-index: 2;
@@ -1413,7 +1387,6 @@ body {
   border-radius: 50%;
 }
 
-/* костыль для IE11, чтобы срабатывал псевдокласс :active */
 .catalog-pagination__link::before {
   position: absolute;
   top: 0;

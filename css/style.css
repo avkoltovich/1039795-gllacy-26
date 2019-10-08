@@ -906,6 +906,7 @@ body {
 
   margin-bottom: 6px;
 }
+
 .filter__sorting::before {
   position: absolute;
 
@@ -1033,7 +1034,7 @@ body {
 
 .filter__fat label::before {
   position: absolute;
-  top: 0;
+  top: -2px;
   left: 0;
   z-index: 2;
 
@@ -1061,7 +1062,7 @@ body {
 
 .filter__radio-img {
   position: absolute;
-  top: 0;
+  top: -2px;
   left: 0;
   z-index: 1;
 
@@ -1649,7 +1650,7 @@ body {
 .wrapper__blog-and-subscription {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 40px;
+  margin-bottom: 25px;
 }
 
 .blog {
@@ -1677,6 +1678,7 @@ body {
 }
 
 .blog__text {
+  max-width: 290px;
   margin-top: 5px;
 }
 
@@ -1812,7 +1814,7 @@ body {
   width: 100%;
   min-height: 430px;
   margin: 0 auto;
-  margin-bottom: 6px;
+  margin-bottom: 21px;
 }
 
 .contacts_map-img {
@@ -1821,9 +1823,9 @@ body {
   width: 100%;
 }
 
-#map {
+.contacts__map {
   position: absolute;
-  top: 0;
+  top: 0px;
   z-index: 0;
 
   width: 100%;
@@ -1843,7 +1845,7 @@ body {
   width: 302px;
   min-height: 305px;
   padding-left: 25px;
-  margin-top: 64px;
+  margin-top: 77px;
 
   font-size: 14px;
   font-weight: 400;
@@ -1855,11 +1857,14 @@ body {
 }
 
 .contacts__text {
+  max-width: 150px;
   margin-top: 28px;
   margin-bottom: 2px;
 }
 
 .contacts__address {
+  max-width: 230px;
+
   font-size: 18px;
   font-weight: 700;
   line-height: 24px;
@@ -1867,12 +1872,16 @@ body {
 }
 
 .contacts__tel-block {
+  max-width: 175px;
   margin-top: 15px;
+  margin-bottom: 20px;
 
   line-height: 25px;
 }
 
 .contacts__tel-number {
+  margin-right: 30px;
+
   font-size: 18px;
   font-weight: 700;
   text-decoration: none;
@@ -1882,7 +1891,10 @@ body {
 .contacts__button {
   display: block;
   margin-top: 7px;
-  padding: 13px 24px;
+  padding-top: 9px;
+  padding-right: 29px;
+  padding-bottom: 12px;
+  padding-left: 29px;
 
   font-size: 18px;
   font-weight: 700;

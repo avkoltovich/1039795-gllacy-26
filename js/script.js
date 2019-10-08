@@ -1,4 +1,4 @@
-
+// Модальное окно
 
 var buttonFeedback = document.querySelector('.contacts__button--feed');
 var popupWrap = document.querySelector('.modal-wrapper');
@@ -54,7 +54,6 @@ ymaps.ready(function () {
           searchControlProvider: 'yandex#search'
       }),
 
-      // Создаём макет содержимого.
       MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
           '<div style="color: #FFFFFF; font-weight: bold;">$[properties.iconContent]</div>'
       ),
@@ -62,15 +61,9 @@ ymaps.ready(function () {
       myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
           hintContent: 'Gllacy Shop',
       }, {
-          // Опции.
-          // Необходимо указать данный тип макета.
           iconLayout: 'default#image',
-          // Своё изображение иконки метки.
           iconImageHref: '../img/pointer.svg',
-          // Размеры метки.
           iconImageSize: [80, 140],
-          // Смещение левого верхнего угла иконки относительно
-          // её "ножки" (точки привязки).
           iconImageOffset: [-40, -140]
       });
 

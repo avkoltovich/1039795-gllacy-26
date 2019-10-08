@@ -62,7 +62,7 @@ ymaps.ready(function () {
           hintContent: 'Gllacy Shop',
       }, {
           iconLayout: 'default#image',
-          iconImageHref: 'img/pointer.svg',
+          iconImageHref: 'img/map-pointer.svg',
           iconImageSize: [80, 140],
           iconImageOffset: [-40, -140]
       });

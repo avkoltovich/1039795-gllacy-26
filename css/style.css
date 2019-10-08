@@ -409,7 +409,7 @@ body {
   fill: #fff;
 }
 
-.header-nav__svg--oval {
+.header-nav__svg--round {
   height: 32px;
   margin-top: 2px;
 }
@@ -754,7 +754,7 @@ body {
   color: #999;
 }
 
-.cart-block__cell--sepr {
+.cart-block__cell--divide {
   padding-right: 3px;
 }
 
